@@ -121,7 +121,6 @@ const ann = {
   </picture>
 </div>
 
-> ⚠️ Ảnh rắn chỉ hiện sau khi bạn thêm file `.github/workflows/snake.yml` và chạy workflow lần đầu.
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:7C3AED,50:A855F7,100:22D3EE&height=3&section=header" />
 
