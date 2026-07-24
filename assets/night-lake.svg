@@ -235,9 +235,25 @@
     <!-- thwarts (seats) -->
     <path d="M-22,-7 L-20,-2" stroke="#1b2333" stroke-width="3" stroke-linecap="round"/>
     <path d="M22,-9 L24,-4" stroke="#1b2333" stroke-width="3" stroke-linecap="round"/>
-    <!-- oar resting over the side -->
-    <path d="M-6,-8 L-50,10" stroke="#141b2d" stroke-width="2.4" stroke-linecap="round"/>
-    <path d="M-50,10 l-11,4 4,-9 Z" fill="#141b2d"/>
+    <!-- cat, sitting on the thwart — moon-gazing while it fishes -->
+    <g transform="translate(2,2)">
+      <!-- fishing rod + line dropping into the water -->
+      <path d="M-7,-16 L-48,-38" stroke="#2a3350" stroke-width="1.6" stroke-linecap="round"/>
+      <path d="M-48,-38 L-45,9" stroke="#6f8cc0" stroke-width="0.8" opacity="0.7"/>
+      <ellipse cx="-45" cy="9" rx="4" ry="1.5" fill="none" stroke="#7fd4ff" stroke-width="0.8" opacity="0.55"/>
+      <circle cx="-45" cy="7" r="1.4" fill="#cfe6ff"/>
+      <!-- body (facing the moon, chin lifted) -->
+      <path d="M-8,-10 L-9,-23 Q-11,-28 -16,-30 Q-21,-31 -19,-34 Q-17,-42 -14,-40 L-16,-47 L-11,-40 L-8,-45 L-5,-39 Q0,-34 4,-31 Q14,-30 20,-25 Q25,-20 23,-11 L20,-10 Z" fill="#05060d"/>
+      <!-- tail curling to the front -->
+      <path d="M21,-14 Q33,-10 25,-3 Q18,1 11,-3 Q7,-6 11,-9 Q16,-12 21,-14 Z" fill="#05060d"/>
+      <!-- moon-side rim light -->
+      <g fill="none" stroke="#7fd4ff" stroke-width="1" opacity="0.5" stroke-linecap="round">
+        <path d="M-19,-34 Q-17,-42 -14,-40"/>
+        <path d="M-16,-30 Q-11,-28 -9,-23"/>
+      </g>
+      <!-- eye glint catching the moonlight -->
+      <circle cx="-13.5" cy="-35" r="0.9" fill="#bfe9ff"/>
+    </g>
     <!-- lantern on a post at the bow -->
     <path d="M46,-9 L46,-44" stroke="#0d1120" stroke-width="2.4" stroke-linecap="round"/>
     <path d="M39,-44 L53,-44" stroke="#0d1120" stroke-width="2" stroke-linecap="round"/>
