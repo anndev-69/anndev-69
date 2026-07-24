@@ -6,9 +6,10 @@
   ╚══════════════════════════════════════════════════════════════╝
 -->
 
-<!-- ░░░ HERO — chill night by the lake (animated SVG) ░░░ -->
+<!-- ░░░ HERO — Đồng Quê: a full day over the rice terraces (animated SVG) ░░░ -->
+<!-- note: the old "night by the lake" banner still lives at assets/night-lake.svg, just not shown here -->
 <div align="center">
-  <img width="100%" src="https://raw.githubusercontent.com/anndev-69/anndev-69/main/assets/night-lake.svg" alt="A chill night by the lake — moon over rippling water with fish, and ANN-Dev on a pier working on a MacBook" />
+  <img width="100%" src="https://raw.githubusercontent.com/anndev-69/anndev-69/main/assets/rice-day-night.svg" alt="Terraced rice paddies through a full day — a farmer leads a water buffalo out at dawn, white egrets glide over the golden fields at noon, and the village house lights up beside the old banyan tree at night" />
 </div>
 
 <!-- ░░░ TYPING ░░░ -->
