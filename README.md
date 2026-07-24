@@ -7,9 +7,9 @@
 -->
 
 <!-- ░░░ HERO — Đồng Quê: a full day over the rice terraces (animated SVG) ░░░ -->
-<!-- note: the old "night by the lake" banner still lives at assets/night-lake.svg, just not shown here -->
+<!-- Pinned to the original asset commit so main stays minimal: only README.md + .github/ -->
 <div align="center">
-  <img width="100%" src="https://raw.githubusercontent.com/anndev-69/anndev-69/main/assets/rice-day-night.svg" alt="Terraced rice paddies through a full day — a farmer leads a water buffalo out at dawn, white egrets glide over the golden fields at noon, and the village house lights up beside the old banyan tree at night" />
+  <img width="100%" src="https://raw.githubusercontent.com/anndev-69/anndev-69/b9d7771449f88580eac67c5a8c1f67afc559b664/assets/rice-day-night.svg" alt="Terraced rice paddies through a full day — a farmer leads a water buffalo out at dawn, white egrets glide over the golden fields at noon, and the village house lights up beside the old banyan tree at night" />
 </div>
 
 <!-- ░░░ TYPING ░░░ -->
