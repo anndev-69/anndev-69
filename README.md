@@ -6,8 +6,10 @@
   ╚══════════════════════════════════════════════════════════════╝
 -->
 
-<!-- ░░░ HEADER WAVE ░░░ -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,35:7C3AED,70:A855F7,100:22D3EE&height=220&section=header&text=ANN-Dev&fontSize=80&fontColor=FFFFFF&fontAlignY=34&animation=twinkling&desc=full-stack%20%C2%B7%20automation%20%C2%B7%20shopify&descSize=18&descAlignY=54" />
+<!-- ░░░ HERO — chill night by the lake (animated SVG) ░░░ -->
+<div align="center">
+  <img width="100%" src="https://raw.githubusercontent.com/anndev-69/anndev-69/main/assets/night-lake.svg" alt="A chill night by the lake — moon over rippling water with fish, and ANN-Dev on a pier working on a MacBook" />
+</div>
 
 <!-- ░░░ TYPING ░░░ -->
 <div align="center">
