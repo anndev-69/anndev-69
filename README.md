@@ -1,7 +1,7 @@
 <!--
   ╔══════════════════════════════════════════════════════════════╗
   ║   anndev-69 — GitHub Profile README                          ║
-  ║   Theme: Cyberpunk Neon (purple #A855F7 / cyan #22D3EE)      ║
+  ║   Theme: Đồng Quê Neon — mộc mạc, hiện đại, có gốc có nghề   ║
   ║   Repo: anndev-69/anndev-69  (public, file: README.md)       ║
   ╚══════════════════════════════════════════════════════════════╝
 -->
@@ -15,7 +15,7 @@
 <!-- ░░░ TYPING ░░░ -->
 <div align="center">
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=900&color=A855F7&center=true&vCenter=true&width=720&height=70&lines=%3E+Full-stack+developer+who+actually+ships;%3E+L%E1%BA%ADp+tr%C3%ACnh+vi%C3%AAn+full-stack%2C+code+s%E1%BA%A1ch+v%C3%A0+g%E1%BB%8Dn;%3E+Clean+web+systems+%2B+automation+tools;%3E+H%E1%BB%87+th%E1%BB%91ng+web+g%E1%BB%8Dn+g%C3%A0ng+%2B+t%E1%BB%B1+%C4%91%E1%BB%99ng+h%C3%B3a;%3E+Shopify+solutions+that+scale)](https://anguyen.com)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1100&color=A855F7&center=true&vCenter=true&width=820&height=70&lines=T%E1%BB%AB+h%E1%BA%A1t+g%E1%BA%A1o+qu%C3%AA+nh%C3%A0+%C4%91%E1%BA%BFn+nh%E1%BB%AFng+d%C3%B2ng+code+%C4%91i+xa;%C4%82n+h%E1%BB%8Dc+n%C3%AAn+ng%C6%B0%E1%BB%9Di+%C2%B7+L%C3%A0m+ngh%E1%BB%81+n%C3%AAn+chuy%E1%BB%87n;Clean+systems+%C2%B7+Humble+roots+%C2%B7+Software+that+ships;L%E1%BB%9Bn+l%C3%AAn+t%E1%BB%AB+%C4%91%E1%BB%93ng+qu%C3%AA+%C2%B7+Tr%C6%B0%E1%BB%9Fng+th%C3%A0nh+c%C3%B9ng+c%C3%B4ng+ngh%E1%BB%87)](https://anguyen.com)
 
 <img src="https://komarev.com/ghpvc/?username=anndev-69&label=PROFILE+VIEWS&color=7C3AED&style=for-the-badge" />
 <img src="https://img.shields.io/github/followers/anndev-69?label=FOLLOWERS&style=for-the-badge&color=A855F7&labelColor=0D1117" />
@@ -33,20 +33,29 @@ const ann = {
   name:      "ANN-Dev",
   handle:    "@anndev-69",
   role:      "Full-stack Developer",
+  roots:     "Vietnamese rice fields",
   focus:     ["clean web systems", "automation tools", "shopify"],
   site:      "anguyen.com",
-  motto:     "Ship it, then make it beautiful.",
+  motto:     "Go far, stay rooted.",
 } as const;
 ```
 
-**EN** — I build clean web systems, automation tools, and Shopify solutions that actually ship. Less ceremony, more working software.
+**EN** — I grew up on rice from home, carried forward by family, school, and many quiet seasons of hard work. Today I build clean web systems, automation tools, and Shopify solutions that actually ship. The tools are modern; the way I work stays grounded: learn carefully, build honestly, and leave things better than I found them.
 
-**VI** — Mình xây dựng hệ thống web gọn gàng, công cụ tự động hóa và giải pháp Shopify — thứ chạy được thật, không phải demo.
+**VI** — Mình lớn lên từ hạt gạo quê nhà, được gia đình nuôi dưỡng và chuyện học hành mở lối. Bây giờ mình làm hệ thống web gọn gàng, công cụ tự động hóa và giải pháp Shopify chạy được thật. Công nghệ có thể đi rất xa, nhưng cách mình làm nghề vẫn mộc mạc: học cho tới nơi, làm cho tới chốn, và không quên nơi mình bắt đầu.
+
+<div align="center">
+
+_“Đi xa để mở mang tầm mắt, giữ quê nhà để lòng mình có chốn quay về.”_
+
+</div>
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:22D3EE,50:A855F7,100:7C3AED&height=3&section=header" />
 
 <!-- ░░░ TECH STACK ░░░ -->
 ## <img src="https://media.giphy.com/media/iY8CRBdQXODJSCERIr/giphy.gif" width="28"> Tech Stack · Công nghệ
+
+> Ngày nhỏ quen nhìn người quê chọn giống, giữ nước, đợi mùa; lớn lên làm phần mềm cũng học được đôi điều: chọn đúng công cụ, chăm từng chi tiết và kiên nhẫn để sản phẩm thành hình.
 
 <div align="center">
 
@@ -90,6 +99,8 @@ const ann = {
 <!-- ░░░ STATS ░░░ -->
 ## <img src="https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif" width="28"> Stats · Thống kê
 
+_Mỗi ô xanh là một ngày vun xới. Không phải mùa nào cũng rực rỡ, nhưng ngày nào còn học và còn làm thì ngày đó vẫn đang lớn lên._
+
 <div align="center">
 
 <img height="180em" src="https://github-readme-stats.vercel.app/api?username=anndev-69&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&bg_color=0D1117&title_color=A855F7&icon_color=22D3EE&text_color=C9D1D9&ring_color=F472B6" />
@@ -114,6 +125,8 @@ const ann = {
 <!-- ░░░ SNAKE ░░░ -->
 ## <img src="https://media.giphy.com/media/QssGEmpkyEOhBCb7e1/giphy.gif" width="28"> Contribution Snake
 
+_Con đường học nghề quanh co như bờ ruộng, cứ bền lòng đi rồi những bước nhỏ cũng nối thành một mùa xanh._
+
 <div align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/anndev-69/anndev-69/output/github-snake-dark.svg" />
@@ -127,6 +140,8 @@ const ann = {
 
 <!-- ░░░ PROJECTS ░░░ -->
 ## <img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="28"> Featured · Dự án nổi bật
+
+> Đây là những “mùa vụ số” mình đã gieo bằng ý tưởng, chăm bằng code và mang ra dùng ngoài đời — nơi một sản phẩm tốt phải làm được việc trước khi kể được chuyện hay.
 
 <div align="center">
 
@@ -151,6 +166,8 @@ const ann = {
 <!-- ░░░ CONNECT ░░░ -->
 ## <img src="https://media.giphy.com/media/Ll2fajzk9DgaeriBgg/giphy.gif" width="28"> Connect · Liên hệ
 
+_Nếu bạn cũng thích làm sản phẩm tử tế, nói chuyện công nghệ bên một tách trà, hay đơn giản muốn ghé thăm — mình luôn vui được kết nối._
+
 <div align="center">
 
 <a href="https://anguyen.com"><img src="https://img.shields.io/badge/WEBSITE-anguyen.com-A855F7?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=0D1117" /></a>
@@ -166,4 +183,4 @@ const ann = {
 </div>
 
 <!-- ░░░ FOOTER WAVE ░░░ -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:22D3EE,35:A855F7,70:7C3AED,100:0D1117&height=140&section=footer&text=thanks%20for%20scrolling&fontSize=22&fontColor=FFFFFF&fontAlignY=72&animation=twinkling" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:22D3EE,35:A855F7,70:7C3AED,100:0D1117&height=140&section=footer&text=from%20the%20rice%20fields%2C%20with%20care&fontSize=22&fontColor=FFFFFF&fontAlignY=72&animation=twinkling" />
