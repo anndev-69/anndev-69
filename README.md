@@ -32,26 +32,19 @@ _Go far, stay rooted._
 <!-- ░░░ ABOUT ░░░ -->
 ## <img src="https://raw.githubusercontent.com/anndev-69/anndev-69/b85662f2496151c2c134a7062175bd742c8cbcda/assets/mouse-typing.svg" width="30" align="top" alt="" /> About
 
-<!-- Icon trỏ theo commit SHA nên main không cần giữ thư mục assets/ -->
+<!-- Icon tiêu đề trỏ theo commit SHA nên main không cần giữ thư mục assets/ -->
 
-<table>
-<tr>
-<td valign="top">
+I grew up on rice from home. Family raised me, school pointed me forward, and the rest was a lot of quiet work nobody claps for.
 
-I grew up on rice from home — carried forward by family, by school, and by a lot of quiet work that nobody claps for.
+These days I build **clean web systems**, **automation tools**, and **Shopify solutions** that actually ship. Not demos, not screenshots — things people open on a Tuesday morning and never have to think about.
 
-Today I build **clean web systems**, **automation tools**, and **Shopify solutions** that actually ship. Not demos. Things people use on a Tuesday.
+The tools keep changing. The way I work doesn't: learn it properly, build it honestly, leave it better than I found it.
 
-The tools are modern. The way I work stays grounded: learn carefully, build honestly, and leave things better than I found them.
-
-</td>
-<td width="150" align="center" valign="middle">
-
-<img width="118" src="https://raw.githubusercontent.com/anndev-69/anndev-69/b85662f2496151c2c134a7062175bd742c8cbcda/assets/mouse-typing.svg" alt="A little mouse hammering away at a keyboard" />
-
-</td>
-</tr>
-</table>
+> Mình lớn lên từ hạt gạo quê nhà. Gia đình nuôi lớn, trường lớp mở lối, còn lại là những mùa làm lụng lặng lẽ chẳng ai vỗ tay.
+>
+> Giờ mình làm hệ thống web gọn gàng, công cụ tự động hóa, giải pháp Shopify — thứ chạy được thật, không phải bản trình diễn.
+>
+> Công nghệ thì đổi từng mùa. Cách làm nghề thì không: học cho tới nơi, làm cho tới chốn, và không quên nơi mình bắt đầu.
 
 <div align="center">
 
