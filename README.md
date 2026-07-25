@@ -18,9 +18,10 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1100&color=A855F7&center=true&vCenter=true&width=820&height=70&lines=T%E1%BB%AB+h%E1%BA%A1t+g%E1%BA%A1o+qu%C3%AA+nh%C3%A0+%C4%91%E1%BA%BFn+nh%E1%BB%AFng+d%C3%B2ng+code+%C4%91i+xa;%C4%82n+h%E1%BB%8Dc+n%C3%AAn+ng%C6%B0%E1%BB%9Di+%C2%B7+L%C3%A0m+ngh%E1%BB%81+n%C3%AAn+chuy%E1%BB%87n;Clean+systems+%C2%B7+Humble+roots+%C2%B7+Software+that+ships)](https://anguyen.com)
 
 **ANN-Dev** · Full-stack Developer · web systems, automation, Shopify
+<br/>
 _Go far, stay rooted._
 
-<img src="https://img.shields.io/badge/BASED%20IN-AUSTRALIA-22D3EE?style=for-the-badge&labelColor=0D1117" />
+<img src="https://img.shields.io/badge/BASED%20IN-VI%E1%BB%86T%20NAM-22D3EE?style=for-the-badge&labelColor=0D1117" />
 <img src="https://img.shields.io/github/followers/anndev-69?label=FOLLOWERS&style=for-the-badge&color=A855F7&labelColor=0D1117" />
 <img src="https://komarev.com/ghpvc/?username=anndev-69&label=PROFILE+VIEWS&color=7C3AED&style=for-the-badge" />
 
