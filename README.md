@@ -96,7 +96,7 @@ _“Đi xa để mở mang tầm mắt, giữ quê nhà để lòng mình có ch
 <div align="center">
 
 <a href="https://github.com/decolua/9router">
-  <img width="70%" src="https://github-readme-stats.vercel.app/api/pin/?username=decolua&repo=9router&hide_border=true&bg_color=0D1117&title_color=A855F7&icon_color=22D3EE&text_color=C9D1D9" />
+  <img width="70%" src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=decolua&repo=9router&hide_border=true&bg_color=0D1117&title_color=A855F7&icon_color=22D3EE&text_color=C9D1D9" />
 </a>
 
 </div>
@@ -119,8 +119,12 @@ _Mỗi ô xanh là một ngày vun xới. Không phải mùa nào cũng rực r�
 
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=anndev-69&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&bg_color=0D1117&title_color=A855F7&icon_color=22D3EE&text_color=C9D1D9&ring_color=F472B6" />
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=anndev-69&layout=compact&langs_count=8&hide_border=true&bg_color=0D1117&title_color=A855F7&text_color=C9D1D9" />
+<!-- Card stats: dùng mirror vì instance công khai github-readme-stats.vercel.app đang DEPLOYMENT_PAUSED.
+     Khi nào self-host trên Vercel riêng thì đổi domain ở đây và ở khối pin phía trên. -->
+<img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api?username=anndev-69&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&bg_color=0D1117&title_color=A855F7&icon_color=22D3EE&text_color=C9D1D9&ring_color=F472B6" />
+
+<!-- Card top-langs đã gỡ: 9router là fork (bị loại khỏi thống kê) và repo profile không có ngôn ngữ,
+     nên card luôn rỗng. Thêm lại khi đã có repo gốc. -->
 
 <br/><br/>
 
