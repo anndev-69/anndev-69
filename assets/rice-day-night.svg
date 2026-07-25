@@ -1,0 +1,947 @@
+<!--
+  ══════════════════════════════════════════════════════════════════════
+   "ĐỒNG QUÊ" — animated banner · anndev-69
+   ──────────────────────────────────────────────────────────────────────
+   Ăn học thành tài, nhưng không quên đồng quê.
+   Lớn lên từ hạt gạo quê hương — nắng đồng chiều, bùn mát chân ruộng,
+   tiếng trâu về ngõ, khói bếp đầu làng, bóng cây đa cổ thụ.
+
+   Một ngày nơi thôn dã:
+     bình minh dắt trâu ra đồng · trưa lúa vàng, cò trắng bay ngang ·
+     hoàng hôn dắt trâu về · đêm trăng sao, nhà sáng đèn bên gốc đa.
+
+   Pure SVG + CSS animation (no scripts). Kept in the repo as a keepsake —
+   intentionally not shown on the profile.
+  ══════════════════════════════════════════════════════════════════════
+-->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="1200" height="480" role="img" aria-label="Terraced rice paddies through a full day: the sun rises as a farmer leads a water buffalo out to the fields, arcs overhead, then sets into a starry night as they head back home.">
+<defs>
+  <linearGradient id="d_day" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#4a86c4"/><stop offset="0.45" stop-color="#93bcdd"/>
+    <stop offset="0.8" stop-color="#d6e7f0"/><stop offset="1" stop-color="#eef4f7"/>
+  </linearGradient>
+  <linearGradient id="d_warm" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#f7c67a"/><stop offset="0.55" stop-color="#ffab5e"/>
+    <stop offset="1" stop-color="#ff8c46"/>
+  </linearGradient>
+  <linearGradient id="d_night" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#060a1f"/><stop offset="0.42" stop-color="#111d3c"/>
+    <stop offset="0.7" stop-color="#0a1024"/><stop offset="1" stop-color="#05070f"/>
+  </linearGradient>
+  <radialGradient id="d_sun" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#fff7e0" stop-opacity="0.9"/>
+    <stop offset="0.3" stop-color="#ffd98a" stop-opacity="0.45"/>
+    <stop offset="1" stop-color="#ffb45e" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="d_core" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#ffffff"/><stop offset="0.6" stop-color="#fff2c8"/>
+    <stop offset="1" stop-color="#ffd98a" stop-opacity="0"/>
+  </radialGradient>
+  <radialGradient id="d_moon" cx="40%" cy="36%" r="70%">
+    <stop offset="0" stop-color="#ffffff"/><stop offset="0.6" stop-color="#eaf1ff"/>
+    <stop offset="1" stop-color="#b9c9e6"/>
+  </radialGradient>
+  <linearGradient id="d_field" x1="0" y1="0" x2="1" y2="0.25">
+    <stop offset="0" stop-color="#5f7a2a"/><stop offset="0.45" stop-color="#98a838"/>
+    <stop offset="0.75" stop-color="#d8b44c"/><stop offset="1" stop-color="#ecc659"/>
+  </linearGradient>
+  <linearGradient id="d_mtnFar" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#aeb9ca"/><stop offset="1" stop-color="#c8d2df"/>
+  </linearGradient>
+  <linearGradient id="d_lshade" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#33421a" stop-opacity="0.42"/>
+    <stop offset="0.5" stop-color="#33421a" stop-opacity="0"/>
+  </linearGradient>
+
+  <pattern id="d_rice" width="8" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(-2)">
+    <path d="M2,9 C1,6 3,4 2,1"   stroke="#839a37" stroke-width="1.5" fill="none"/>
+    <path d="M4,9 C5,6 3,4 4,1.5" stroke="#ad9236" stroke-width="1.4" fill="none"/>
+    <path d="M6,9 C7,6 5,4 6,1"   stroke="#c8a43e" stroke-width="1.3" fill="none"/>
+    <circle cx="2" cy="1"   r="0.9" fill="#ecd478"/>
+    <circle cx="4" cy="1.5" r="0.9" fill="#e0c467"/>
+    <circle cx="6" cy="1"   r="0.9" fill="#efd674"/>
+  </pattern>
+  <pattern id="d_rice2" width="8" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(4) translate(4,0)">
+    <path d="M2,9 C1,6 3,4 2,1"   stroke="#728a30" stroke-width="1.3" fill="none" opacity="0.8"/>
+    <path d="M6,9 C7,6 5,4 6,1"   stroke="#bd9a3a" stroke-width="1.2" fill="none" opacity="0.8"/>
+  </pattern>
+
+  <clipPath id="d_fieldClip">
+    <path d="M0,322 C180,300 360,308 520,304 C620,300 720,262 860,250 C1000,240 1120,238 1200,236 L1200,480 L0,480 Z"/>
+  </clipPath>
+  <filter id="d_blur"><feGaussianBlur stdDeviation="3"/></filter>
+  <filter id="d_blur6"><feGaussianBlur stdDeviation="7"/></filter>
+
+  <!-- terrace contour lines -->
+  <path id="dc0"  d="M0,244 C160,254 320,276 500,288 C680,296 860,280 1020,260 C1120,248 1160,242 1200,238"/>
+  <path id="dc1"  d="M0,255 C160,265 320,287 500,299 C680,307 860,291 1020,271 C1120,259 1160,253 1200,249"/>
+  <path id="dc2"  d="M0,267 C160,277 320,299 500,311 C680,319 860,303 1020,283 C1120,271 1160,265 1200,261"/>
+  <path id="dc3"  d="M0,280 C160,290 320,312 500,324 C680,332 860,316 1020,296 C1120,284 1160,278 1200,274"/>
+  <path id="dc4"  d="M0,294 C160,304 320,326 500,338 C680,346 860,330 1020,310 C1120,298 1160,292 1200,288"/>
+  <path id="dc5"  d="M0,309 C160,319 320,341 500,353 C680,361 860,345 1020,325 C1120,313 1160,307 1200,303"/>
+  <path id="dc6"  d="M0,325 C160,335 320,357 500,369 C680,377 860,361 1020,341 C1120,329 1160,323 1200,319"/>
+  <path id="dc7"  d="M0,342 C160,352 320,374 500,386 C680,394 860,378 1020,358 C1120,346 1160,340 1200,336"/>
+  <path id="dc8"  d="M0,360 C160,370 320,392 500,404 C680,412 860,396 1020,376 C1120,364 1160,358 1200,354"/>
+  <path id="dc9"  d="M0,379 C160,389 320,411 500,423 C680,431 860,415 1020,395 C1120,383 1160,377 1200,373"/>
+  <path id="dc10" d="M0,399 C160,409 320,431 500,443 C680,451 860,435 1020,415 C1120,403 1160,397 1200,393"/>
+  <path id="dc11" d="M0,421 C160,431 320,453 500,465 C680,473 860,457 1020,437 C1120,425 1160,419 1200,415"/>
+  <path id="dc12" d="M0,446 C160,456 320,478 500,490 C680,498 860,482 1020,462 C1120,450 1160,444 1200,440"/>
+
+  <!-- rice bushel -->
+  <g id="d_bush" stroke-linecap="round" fill="none">
+    <path d="M0,0 C-1,-8 -4,-12 -7,-18" stroke="#8a9a3e" stroke-width="1.4"/>
+    <path d="M0,0 C0,-9 -1,-14 -2,-20"  stroke="#b8a542" stroke-width="1.4"/>
+    <path d="M0,0 C1,-8 3,-12 6,-17"    stroke="#9aa63f" stroke-width="1.4"/>
+    <path d="M0,0 C2,-7 5,-10 8,-14"    stroke="#c9a63f" stroke-width="1.3"/>
+    <path d="M-7,-18 q-2,3 -1,6" stroke="#d9bf5e" stroke-width="2"/>
+    <path d="M-2,-20 q0,3 1,6"   stroke="#e6cf72" stroke-width="2"/>
+    <path d="M6,-17 q2,2 1,6"    stroke="#d9bf5e" stroke-width="2"/>
+  </g>
+
+  <!-- farmer leading a water buffalo (facing right) -->
+  <g id="d_drover">
+    <!-- buffalo -->
+    <ellipse cx="24" cy="-20" rx="30" ry="14" fill="#0d0f0a"/>
+    <g class="graze">
+      <path d="M50,-24 Q64,-23 71,-12 L63,-6 Q58,-17 44,-16 Z" fill="#0d0f0a"/>
+      <ellipse cx="71" cy="-12" rx="8" ry="6" fill="#0d0f0a"/>
+      <path d="M66,-16 Q59,-26 68,-29" stroke="#0d0f0a" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+      <path d="M73,-16 Q80,-26 71,-30" stroke="#0d0f0a" stroke-width="2.6" fill="none" stroke-linecap="round"/>
+    </g>
+    <path d="M-4,-22 Q-10,-14 -6,-3" stroke="#0d0f0a" stroke-width="2" fill="none" stroke-linecap="round"/>
+    <g stroke="#0d0f0a" stroke-width="3.2" stroke-linecap="round">
+      <line class="legA" x1="9"  y1="-10" x2="9"  y2="1"/>
+      <line class="legB" x1="19" y1="-9"  x2="19" y2="1"/>
+      <line class="legB" x1="40" y1="-10" x2="40" y2="1"/>
+      <line class="legA" x1="50" y1="-9"  x2="50" y2="1"/>
+    </g>
+    <!-- farmer, ahead with a conical hat -->
+    <g transform="translate(92,0)">
+      <path d="M0,-19 Q-12,-15 -22,-12" stroke="#2f2f2f" stroke-width="1" fill="none"/>
+      <g class="bob">
+        <path d="M-3,-22 L3,-22 L2,-10 L-2,-10 Z" fill="#111111"/>
+        <circle cx="0" cy="-26" r="3.4" fill="#111111"/>
+        <path d="M-8,-27 L8,-27 L0,-35 Z" fill="#1c1608"/>
+        <path d="M-1,-20 L-6,-16" stroke="#111111" stroke-width="2.2" stroke-linecap="round"/>
+      </g>
+      <g stroke="#111111" stroke-width="2.6" stroke-linecap="round">
+        <line class="legA" x1="-1" y1="-10" x2="-3" y2="0"/>
+        <line class="legB" x1="1"  y1="-10" x2="3"  y2="0"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- flying egret (cò) -->
+  <g id="d_egret">
+    <path d="M-6,0 Q-15,3 -22,7" stroke="#e7ebe7" stroke-width="1" fill="none" stroke-linecap="round"/>
+    <ellipse cx="0" cy="0" rx="7" ry="2.4" fill="#f4f6f4"/>
+    <path d="M6,-1 Q15,-4 21,-8 L18,-3 Q12,-1 6,1 Z" fill="#f4f6f4"/>
+    <g class="flap"><path d="M-1,-1 Q-8,-13 -18,-12 Q-9,-4 1,-1 Z" fill="#ffffff"/></g>
+  </g>
+
+  <style>
+    .flap { animation: d_flap .7s ease-in-out infinite; transform-box:fill-box; transform-origin:100% 100%; }
+    @keyframes d_flap { 0%,100%{transform:rotate(-20deg)} 50%{transform:rotate(16deg)} }
+    .fly1 { animation: d_flyby 26s linear infinite; }
+    .fly2 { animation: d_flyby 32s linear infinite; }
+    .fly3 { animation: d_flyby 21s linear infinite; }
+    @keyframes d_flyby { 0%{transform:translate(-80px,12px)} 100%{transform:translate(1280px,-34px)} }
+    .cl  { animation: d_drift 80s linear infinite; }
+    .cl2 { animation: d_drift 110s linear infinite; }
+    @keyframes d_drift { from{transform:translateX(-180px)} to{transform:translateX(1380px)} }
+
+    .warmSky { animation: d_warmA 30s ease-in-out infinite; }
+    @keyframes d_warmA { 0%{opacity:.15} 6%{opacity:.78} 18%{opacity:.15} 55%{opacity:.08} 68%{opacity:.82} 82%{opacity:.32} 100%{opacity:.15} }
+
+    .nightWash { animation: d_washA 30s ease-in-out infinite; }
+    @keyframes d_washA { 0%{opacity:.74} 8%{opacity:.5} 16%{opacity:0} 60%{opacity:0} 74%{opacity:.2} 86%{opacity:.74} 100%{opacity:.74} }
+
+    .nightUp { animation: d_upA 30s ease-in-out infinite; }
+    @keyframes d_upA { 0%{opacity:1} 10%{opacity:.3} 16%{opacity:0} 70%{opacity:0} 84%{opacity:.92} 100%{opacity:1} }
+
+    .sunFade { animation: d_sunF 30s linear infinite; }
+    @keyframes d_sunF { 0%{opacity:0} 10%{opacity:1} 64%{opacity:1} 76%{opacity:0} 100%{opacity:0} }
+    .sunArc { animation: d_sunArc 30s linear infinite; }
+    @keyframes d_sunArc {
+      0%{transform:translate(120px,340px)} 10%{transform:translate(210px,240px)}
+      30%{transform:translate(390px,130px)} 45%{transform:translate(600px,90px)}
+      60%{transform:translate(830px,140px)} 74%{transform:translate(1030px,265px)}
+      100%{transform:translate(1110px,345px)}
+    }
+
+    /* walk OUT (0-20%), then STAY grazing (20-72%); faces right */
+    .droveOut  { animation: d_out 30s linear infinite; }
+    @keyframes d_out { 0%{transform:translateX(-200px)} 5%{transform:translateX(-200px)} 20%{transform:translateX(600px)} 100%{transform:translateX(600px)} }
+    .droveOutO { animation: d_outO 30s linear infinite; }
+    @keyframes d_outO { 0%{opacity:0} 4%{opacity:0} 6%{opacity:1} 71%{opacity:1} 73%{opacity:0} 100%{opacity:0} }
+    /* walk BACK home (72-90%); faces left */
+    .droveBack  { animation: d_back 30s linear infinite; }
+    @keyframes d_back { 0%{transform:translateX(600px)} 72%{transform:translateX(600px)} 90%{transform:translateX(-200px)} 100%{transform:translateX(-200px)} }
+    .droveBackO { animation: d_backO 30s linear infinite; }
+    @keyframes d_backO { 0%{opacity:0} 71%{opacity:0} 73%{opacity:1} 90%{opacity:1} 92%{opacity:0} 100%{opacity:0} }
+
+    /* legs swing only during the two walking windows, still while grazing */
+    .legA { animation: d_walkA 30s linear infinite; transform-box:fill-box; transform-origin:top; }
+    .legB { animation: d_walkB 30s linear infinite; transform-box:fill-box; transform-origin:top; }
+    @keyframes d_walkA {
+      0%,6%{transform:rotate(0)}
+      8%{transform:rotate(16deg)} 10%{transform:rotate(-16deg)} 12%{transform:rotate(16deg)} 14%{transform:rotate(-16deg)} 16%{transform:rotate(16deg)} 18%{transform:rotate(-16deg)}
+      20%,72%{transform:rotate(0)}
+      74%{transform:rotate(16deg)} 76%{transform:rotate(-16deg)} 78%{transform:rotate(16deg)} 80%{transform:rotate(-16deg)} 82%{transform:rotate(16deg)} 84%{transform:rotate(-16deg)} 86%{transform:rotate(16deg)} 88%{transform:rotate(-16deg)}
+      90%,100%{transform:rotate(0)}
+    }
+    @keyframes d_walkB {
+      0%,6%{transform:rotate(0)}
+      8%{transform:rotate(-16deg)} 10%{transform:rotate(16deg)} 12%{transform:rotate(-16deg)} 14%{transform:rotate(16deg)} 16%{transform:rotate(-16deg)} 18%{transform:rotate(16deg)}
+      20%,72%{transform:rotate(0)}
+      74%{transform:rotate(-16deg)} 76%{transform:rotate(16deg)} 78%{transform:rotate(-16deg)} 80%{transform:rotate(16deg)} 82%{transform:rotate(-16deg)} 84%{transform:rotate(16deg)} 86%{transform:rotate(-16deg)} 88%{transform:rotate(16deg)}
+      90%,100%{transform:rotate(0)}
+    }
+    .bob { animation: d_bob 30s linear infinite; transform-box:fill-box; }
+    @keyframes d_bob { 0%,6%{transform:translateY(0)} 12%{transform:translateY(-1.4px)} 20%,72%{transform:translateY(0)} 80%{transform:translateY(-1.4px)} 90%,100%{transform:translateY(0)} }
+    /* buffalo lowers its head to graze during the stay */
+    .graze { animation: d_graze 30s ease-in-out infinite; transform-box:fill-box; transform-origin:left; }
+    @keyframes d_graze { 0%,22%{transform:rotate(0)} 30%{transform:rotate(11deg)} 60%{transform:rotate(11deg)} 70%,100%{transform:rotate(0)} }
+
+    .sway  { animation: d_sway 5.5s ease-in-out infinite; transform-box:fill-box; transform-origin:bottom; }
+    .sway2 { animation: d_sway 7s   ease-in-out infinite; transform-box:fill-box; transform-origin:bottom; }
+    @keyframes d_sway { 0%,100%{transform:skewX(0)} 50%{transform:skewX(-6deg)} }
+
+    .mist { animation: d_mist 26s ease-in-out infinite; }
+    @keyframes d_mist { 0%,100%{transform:translateX(0)} 50%{transform:translateX(46px)} }
+  </style>
+</defs>
+
+<!-- ══ SKY (day base, warm tint) ══ -->
+<rect width="1200" height="330" fill="url(#d_day)"/>
+<rect class="warmSky" width="1200" height="300" fill="url(#d_warm)"/>
+
+<!-- sun (arcs across, fades at night) -->
+<g class="sunArc"><g class="sunFade">
+  <circle r="130" fill="url(#d_sun)"/>
+  <circle r="27" fill="url(#d_core)"/>
+  <circle r="14" fill="#fff7de"/>
+</g></g>
+
+<!-- clouds -->
+<g fill="#f3ede1" opacity="0.8">
+  <g class="cl2"><ellipse cx="240" cy="70" rx="150" ry="24" filter="url(#d_blur6)"/><ellipse cx="370" cy="94" rx="110" ry="18" filter="url(#d_blur6)"/></g>
+  <g class="cl"><ellipse cx="900" cy="80" rx="140" ry="20" filter="url(#d_blur6)"/></g>
+</g>
+
+<!-- ══ MOUNTAINS ══ -->
+<path d="M0,150 L120,205 L250,250 L360,225 L470,255 L470,330 L0,330 Z" fill="#96a08a" opacity="0.85"/>
+<path d="M0,205 L90,235 L200,262 L300,245 L400,270 L470,258 L470,330 L0,330 Z" fill="#7f8a72" opacity="0.8"/>
+<path d="M1200,235 L1090,255 L980,285 L880,262 L820,300 L1200,300 Z" fill="url(#d_mtnFar)" opacity="0.7"/>
+<path d="M1200,275 L1060,300 L950,320 L860,305 L820,330 L1200,330 Z" fill="#aab6c6" opacity="0.55"/>
+
+<!-- ══ FIELDS ══ -->
+<g clip-path="url(#d_fieldClip)">
+  <rect x="0" y="230" width="1200" height="250" fill="url(#d_field)"/>
+  <rect x="0" y="230" width="1200" height="250" fill="url(#d_rice)" opacity="0.95"/>
+  <rect x="0" y="230" width="1200" height="250" fill="url(#d_rice2)" opacity="0.6"/>
+  <g fill="none" stroke="#37461a" stroke-opacity="0.45" stroke-width="5">
+    <use href="#dc0"/><use href="#dc1"/><use href="#dc2"/><use href="#dc3"/><use href="#dc4"/><use href="#dc5"/><use href="#dc6"/><use href="#dc7"/><use href="#dc8"/><use href="#dc9"/><use href="#dc10"/><use href="#dc11"/><use href="#dc12"/>
+  </g>
+  <g fill="none" stroke="#f7ecac" stroke-opacity="0.5" stroke-width="2" transform="translate(0,-3.5)">
+    <use href="#dc0"/><use href="#dc1"/><use href="#dc2"/><use href="#dc3"/><use href="#dc4"/><use href="#dc5"/><use href="#dc6"/><use href="#dc7"/><use href="#dc8"/><use href="#dc9"/><use href="#dc10"/><use href="#dc11"/><use href="#dc12"/>
+  </g>
+  <rect x="0" y="298" width="740" height="182" fill="url(#d_lshade)"/>
+</g>
+
+<!-- haze softening the mountain/field horizon on the right -->
+<ellipse cx="1000" cy="244" rx="360" ry="18" fill="#e2e9f1" opacity="0.4" filter="url(#d_blur6)"/>
+<ellipse cx="760" cy="252" rx="200" ry="12" fill="#e2e9f1" opacity="0.28" filter="url(#d_blur6)"/>
+
+<!-- valley mist -->
+<g fill="#eef1ea">
+  <ellipse class="mist" cx="70" cy="322" rx="140" ry="12" opacity="0.24" filter="url(#d_blur6)"/>
+</g>
+
+<!-- ══ BANYAN TREE (cây đa đầu làng — bên trái) ══ -->
+<g>
+  <!-- aerial roots hanging to the ground -->
+  <g stroke="#241a10" stroke-width="1.8" opacity="0.75" stroke-linecap="round">
+    <line x1="170" y1="176" x2="166" y2="300"/>
+    <line x1="205" y1="196" x2="207" y2="300"/>
+    <line x1="300" y1="192" x2="304" y2="300"/>
+    <line x1="335" y1="182" x2="332" y2="300"/>
+    <line x1="255" y1="206" x2="256" y2="300"/>
+  </g>
+  <!-- trunk + buttress roots -->
+  <path d="M232,300 C236,250 228,215 250,175 C270,212 264,250 270,300 Z" fill="#2c2013"/>
+  <path d="M224,300 C228,284 236,277 246,270 L250,300 Z" fill="#2c2013"/>
+  <path d="M278,300 C274,284 266,277 256,270 L252,300 Z" fill="#2c2013"/>
+  <!-- main branches -->
+  <g stroke="#2c2013" stroke-width="7" fill="none" stroke-linecap="round">
+    <path d="M250,196 C212,176 188,170 160,162"/>
+    <path d="M252,190 C292,172 322,168 350,166"/>
+    <path d="M250,200 C248,180 248,165 250,146"/>
+  </g>
+  <!-- dense canopy -->
+  <g fill="#1c3a17">
+    <ellipse cx="250" cy="150" rx="155" ry="72"/>
+    <ellipse cx="160" cy="166" rx="82"  ry="56"/>
+    <ellipse cx="345" cy="160" rx="90"  ry="58"/>
+    <ellipse cx="250" cy="118" rx="104" ry="56"/>
+    <ellipse cx="200" cy="140" rx="72"  ry="46"/>
+    <ellipse cx="312" cy="134" rx="76"  ry="48"/>
+  </g>
+  <g fill="#2e5426" opacity="0.6">
+    <ellipse cx="228" cy="108" rx="72" ry="30"/>
+    <ellipse cx="312" cy="116" rx="52" ry="24"/>
+  </g>
+</g>
+
+<!-- ══ EGRETS (cò bay) over the paddies ══ -->
+<g>
+  <g class="fly1"><g transform="translate(150,150)"><use href="#d_egret"/></g></g>
+  <g class="fly1" style="animation-delay:-9s"><g transform="translate(210,168) scale(0.85)"><use href="#d_egret"/></g></g>
+  <g class="fly2"><g transform="translate(60,200) scale(0.8)"><use href="#d_egret"/></g></g>
+  <g class="fly3"><g transform="translate(-10,124) scale(0.62)"><use href="#d_egret"/></g></g>
+  <g class="fly2" style="animation-delay:-16s"><g transform="translate(0,226) scale(0.95)"><use href="#d_egret"/></g></g>
+</g>
+
+<!-- ══ RICE (phủ kín ruộng từ chân núi ra tới mép dưới, xa nhỏ gần to) ══ -->
+<g clip-path="url(#d_fieldClip)">
+  <!-- y=247 · 59 bụi -->
+  <g transform="translate(5,250) scale(0.30)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(32,250) scale(0.29)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(45,250) scale(0.28)"><g class="sway2" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(72,247) scale(0.30)"><g class="sway" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(94,247) scale(0.32)"><g class="sway" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(110,248) scale(0.30)"><g class="sway" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(128,248) scale(0.28)"><g class="sway2" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(155,250) scale(0.32)"><g class="sway" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(175,245) scale(0.32)"><g class="sway2" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(196,248) scale(0.34)"><g class="sway2" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(214,250) scale(0.30)"><g class="sway2" style="animation-delay:0.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(232,247) scale(0.33)"><g class="sway2" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(254,246) scale(0.34)"><g class="sway2" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(278,247) scale(0.28)"><g class="sway" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(298,249) scale(0.33)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(322,246) scale(0.30)"><g class="sway2" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(336,249) scale(0.29)"><g class="sway2" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(363,250) scale(0.36)"><g class="sway2" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(382,250) scale(0.33)"><g class="sway" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(403,247) scale(0.33)"><g class="sway" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(425,249) scale(0.34)"><g class="sway" style="animation-delay:1.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(441,249) scale(0.33)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(464,249) scale(0.32)"><g class="sway" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(487,247) scale(0.32)"><g class="sway" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(506,249) scale(0.31)"><g class="sway" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(525,249) scale(0.29)"><g class="sway2" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(550,245) scale(0.35)"><g class="sway2" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(566,250) scale(0.31)"><g class="sway2" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(590,249) scale(0.34)"><g class="sway2" style="animation-delay:0.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(613,248) scale(0.35)"><g class="sway2" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(629,250) scale(0.33)"><g class="sway" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(655,245) scale(0.32)"><g class="sway2" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(678,247) scale(0.35)"><g class="sway" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(694,250) scale(0.33)"><g class="sway2" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(717,247) scale(0.31)"><g class="sway2" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(732,247) scale(0.31)"><g class="sway2" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(759,247) scale(0.31)"><g class="sway2" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(773,249) scale(0.32)"><g class="sway2" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(797,246) scale(0.35)"><g class="sway2" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(824,247) scale(0.28)"><g class="sway2" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(844,249) scale(0.31)"><g class="sway2" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(859,247) scale(0.29)"><g class="sway2" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(877,250) scale(0.34)"><g class="sway2" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(898,246) scale(0.33)"><g class="sway2" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(927,247) scale(0.29)"><g class="sway2" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(944,246) scale(0.36)"><g class="sway" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(961,247) scale(0.36)"><g class="sway2" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(981,247) scale(0.28)"><g class="sway2" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1009,250) scale(0.33)"><g class="sway" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1029,248) scale(0.28)"><g class="sway2" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1047,248) scale(0.32)"><g class="sway" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1071,248) scale(0.36)"><g class="sway2" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1088,248) scale(0.28)"><g class="sway2" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1114,249) scale(0.36)"><g class="sway2" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1135,249) scale(0.29)"><g class="sway2" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1156,248) scale(0.29)"><g class="sway" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1175,247) scale(0.29)"><g class="sway2" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1197,246) scale(0.35)"><g class="sway2" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1212,245) scale(0.34)"><g class="sway2" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <!-- y=255 · 55 bụi -->
+  <g transform="translate(-14,256) scale(0.39)"><g class="sway2" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(13,257) scale(0.41)"><g class="sway2" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(35,258) scale(0.33)"><g class="sway" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(57,256) scale(0.37)"><g class="sway2" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(82,254) scale(0.35)"><g class="sway2" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(100,255) scale(0.37)"><g class="sway2" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(122,256) scale(0.41)"><g class="sway" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(147,258) scale(0.43)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(168,257) scale(0.34)"><g class="sway" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(193,254) scale(0.40)"><g class="sway" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(218,255) scale(0.42)"><g class="sway" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(237,258) scale(0.37)"><g class="sway" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(263,258) scale(0.36)"><g class="sway" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(284,255) scale(0.36)"><g class="sway2" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(303,254) scale(0.41)"><g class="sway2" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(335,257) scale(0.36)"><g class="sway2" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(357,256) scale(0.33)"><g class="sway2" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(371,255) scale(0.42)"><g class="sway2" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(396,254) scale(0.43)"><g class="sway" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(420,255) scale(0.39)"><g class="sway" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(444,254) scale(0.42)"><g class="sway2" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(467,258) scale(0.33)"><g class="sway" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(484,258) scale(0.39)"><g class="sway2" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(512,254) scale(0.36)"><g class="sway2" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(537,257) scale(0.40)"><g class="sway2" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(560,257) scale(0.33)"><g class="sway2" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(579,256) scale(0.36)"><g class="sway" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(600,256) scale(0.36)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(628,256) scale(0.33)"><g class="sway" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(650,257) scale(0.37)"><g class="sway2" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(670,254) scale(0.36)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(696,256) scale(0.33)"><g class="sway2" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(710,256) scale(0.40)"><g class="sway2" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(742,255) scale(0.43)"><g class="sway2" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(761,256) scale(0.40)"><g class="sway" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(787,255) scale(0.35)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(809,254) scale(0.34)"><g class="sway2" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(827,255) scale(0.36)"><g class="sway2" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(857,258) scale(0.40)"><g class="sway" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(878,254) scale(0.39)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(903,257) scale(0.41)"><g class="sway" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(921,258) scale(0.40)"><g class="sway2" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(948,256) scale(0.38)"><g class="sway" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(962,258) scale(0.33)"><g class="sway" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(993,255) scale(0.40)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1014,254) scale(0.38)"><g class="sway2" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1029,255) scale(0.40)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1058,254) scale(0.41)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1082,258) scale(0.38)"><g class="sway" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1102,255) scale(0.36)"><g class="sway2" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1129,256) scale(0.37)"><g class="sway" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1152,258) scale(0.41)"><g class="sway2" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1167,256) scale(0.36)"><g class="sway2" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1196,257) scale(0.33)"><g class="sway" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1211,255) scale(0.33)"><g class="sway2" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <!-- y=264 · 50 bụi -->
+  <g transform="translate(-2,266) scale(0.48)"><g class="sway" style="animation-delay:0.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(13,265) scale(0.39)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(46,265) scale(0.46)"><g class="sway" style="animation-delay:0.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(62,262) scale(0.42)"><g class="sway2" style="animation-delay:0.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(94,265) scale(0.47)"><g class="sway" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(116,267) scale(0.40)"><g class="sway2" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(141,267) scale(0.38)"><g class="sway" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(171,265) scale(0.49)"><g class="sway" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(188,262) scale(0.41)"><g class="sway2" style="animation-delay:1.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(210,262) scale(0.39)"><g class="sway2" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(237,265) scale(0.46)"><g class="sway2" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(267,262) scale(0.40)"><g class="sway2" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(285,265) scale(0.48)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(316,265) scale(0.44)"><g class="sway2" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(340,264) scale(0.43)"><g class="sway" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(363,262) scale(0.41)"><g class="sway" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(392,264) scale(0.46)"><g class="sway" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(408,265) scale(0.44)"><g class="sway2" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(439,263) scale(0.40)"><g class="sway" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(467,265) scale(0.38)"><g class="sway2" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(490,264) scale(0.40)"><g class="sway" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(513,264) scale(0.49)"><g class="sway" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(534,263) scale(0.41)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(567,267) scale(0.43)"><g class="sway2" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(585,266) scale(0.38)"><g class="sway" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(614,263) scale(0.48)"><g class="sway2" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(631,263) scale(0.48)"><g class="sway2" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(660,263) scale(0.48)"><g class="sway2" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(686,263) scale(0.39)"><g class="sway2" style="animation-delay:1.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(709,266) scale(0.42)"><g class="sway" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(735,266) scale(0.47)"><g class="sway2" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(765,266) scale(0.38)"><g class="sway" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(779,262) scale(0.46)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(808,266) scale(0.41)"><g class="sway2" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(834,265) scale(0.48)"><g class="sway2" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(853,267) scale(0.44)"><g class="sway2" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(887,267) scale(0.43)"><g class="sway" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(914,265) scale(0.40)"><g class="sway2" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(933,266) scale(0.41)"><g class="sway2" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(958,265) scale(0.41)"><g class="sway" style="animation-delay:1.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(981,263) scale(0.42)"><g class="sway2" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1009,263) scale(0.45)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1032,263) scale(0.46)"><g class="sway" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1057,265) scale(0.42)"><g class="sway2" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1084,265) scale(0.47)"><g class="sway" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1102,263) scale(0.47)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1137,266) scale(0.47)"><g class="sway" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1161,264) scale(0.42)"><g class="sway" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1178,265) scale(0.39)"><g class="sway2" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1210,263) scale(0.46)"><g class="sway2" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <!-- y=274 · 46 bụi -->
+  <g transform="translate(-7,273) scale(0.49)"><g class="sway2" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(18,272) scale(0.54)"><g class="sway2" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(54,273) scale(0.52)"><g class="sway2" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(78,273) scale(0.51)"><g class="sway" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(97,273) scale(0.52)"><g class="sway2" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(134,276) scale(0.55)"><g class="sway2" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(155,273) scale(0.53)"><g class="sway2" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(189,272) scale(0.53)"><g class="sway" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(205,272) scale(0.51)"><g class="sway" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(242,272) scale(0.47)"><g class="sway2" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(262,272) scale(0.49)"><g class="sway2" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(286,275) scale(0.45)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(322,274) scale(0.56)"><g class="sway2" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(344,275) scale(0.49)"><g class="sway" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(366,276) scale(0.55)"><g class="sway" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(403,275) scale(0.54)"><g class="sway" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(426,274) scale(0.47)"><g class="sway2" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(447,272) scale(0.51)"><g class="sway" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(481,273) scale(0.42)"><g class="sway2" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(501,272) scale(0.52)"><g class="sway" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(529,275) scale(0.52)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(558,273) scale(0.50)"><g class="sway2" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(592,275) scale(0.51)"><g class="sway" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(617,272) scale(0.51)"><g class="sway2" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(638,273) scale(0.50)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(672,274) scale(0.52)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(692,272) scale(0.44)"><g class="sway2" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(721,275) scale(0.46)"><g class="sway" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(754,272) scale(0.45)"><g class="sway" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(778,275) scale(0.55)"><g class="sway" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(808,273) scale(0.50)"><g class="sway2" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(829,272) scale(0.54)"><g class="sway2" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(850,276) scale(0.43)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(890,275) scale(0.51)"><g class="sway" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(916,272) scale(0.45)"><g class="sway" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(931,276) scale(0.46)"><g class="sway" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(958,273) scale(0.47)"><g class="sway2" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(987,275) scale(0.46)"><g class="sway2" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1019,275) scale(0.42)"><g class="sway" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1048,275) scale(0.51)"><g class="sway2" style="animation-delay:0.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1070,276) scale(0.54)"><g class="sway" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1094,273) scale(0.47)"><g class="sway" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1125,276) scale(0.44)"><g class="sway" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1150,276) scale(0.48)"><g class="sway2" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1180,276) scale(0.53)"><g class="sway2" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1201,276) scale(0.53)"><g class="sway2" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <!-- y=284 · 43 bụi -->
+  <g transform="translate(-10,286) scale(0.62)"><g class="sway" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(21,283) scale(0.52)"><g class="sway" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(47,285) scale(0.55)"><g class="sway" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(79,283) scale(0.53)"><g class="sway2" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(101,284) scale(0.54)"><g class="sway" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(128,283) scale(0.58)"><g class="sway2" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(163,286) scale(0.53)"><g class="sway2" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(197,284) scale(0.53)"><g class="sway2" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(217,282) scale(0.56)"><g class="sway2" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(254,284) scale(0.50)"><g class="sway2" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(282,282) scale(0.49)"><g class="sway2" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(309,286) scale(0.55)"><g class="sway2" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(337,282) scale(0.62)"><g class="sway2" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(368,283) scale(0.51)"><g class="sway" style="animation-delay:1.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(393,286) scale(0.54)"><g class="sway2" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(426,285) scale(0.56)"><g class="sway2" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(457,287) scale(0.52)"><g class="sway" style="animation-delay:1.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(485,284) scale(0.49)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(510,284) scale(0.56)"><g class="sway2" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(546,284) scale(0.51)"><g class="sway" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(572,286) scale(0.63)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(605,285) scale(0.55)"><g class="sway" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(629,284) scale(0.51)"><g class="sway" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(655,285) scale(0.61)"><g class="sway2" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(694,284) scale(0.51)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(720,282) scale(0.56)"><g class="sway2" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(749,286) scale(0.59)"><g class="sway" style="animation-delay:1.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(778,285) scale(0.50)"><g class="sway2" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(800,284) scale(0.54)"><g class="sway" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(842,286) scale(0.62)"><g class="sway" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(868,284) scale(0.57)"><g class="sway2" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(889,284) scale(0.52)"><g class="sway2" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(927,286) scale(0.61)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(952,286) scale(0.51)"><g class="sway" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(986,283) scale(0.49)"><g class="sway2" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1016,284) scale(0.61)"><g class="sway2" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1034,285) scale(0.48)"><g class="sway2" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1070,284) scale(0.58)"><g class="sway" style="animation-delay:1.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1093,286) scale(0.63)"><g class="sway" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1135,284) scale(0.55)"><g class="sway2" style="animation-delay:0.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1153,282) scale(0.56)"><g class="sway" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1185,286) scale(0.54)"><g class="sway" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1215,286) scale(0.63)"><g class="sway2" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <!-- y=294 · 39 bụi -->
+  <g transform="translate(-10,294) scale(0.61)"><g class="sway2" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(31,296) scale(0.59)"><g class="sway2" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(62,296) scale(0.68)"><g class="sway" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(90,294) scale(0.59)"><g class="sway2" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(119,295) scale(0.63)"><g class="sway" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(154,294) scale(0.64)"><g class="sway" style="animation-delay:1.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(183,294) scale(0.53)"><g class="sway2" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(213,295) scale(0.63)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(243,296) scale(0.61)"><g class="sway" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(276,296) scale(0.70)"><g class="sway" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(311,296) scale(0.69)"><g class="sway2" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(335,295) scale(0.63)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(371,296) scale(0.57)"><g class="sway" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(408,293) scale(0.59)"><g class="sway" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(439,293) scale(0.60)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(472,297) scale(0.57)"><g class="sway" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(496,294) scale(0.56)"><g class="sway2" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(529,293) scale(0.70)"><g class="sway2" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(569,292) scale(0.59)"><g class="sway" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(588,295) scale(0.64)"><g class="sway2" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(621,294) scale(0.67)"><g class="sway2" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(655,296) scale(0.58)"><g class="sway2" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(691,297) scale(0.67)"><g class="sway2" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(717,297) scale(0.61)"><g class="sway2" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(762,296) scale(0.70)"><g class="sway" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(790,294) scale(0.62)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(815,293) scale(0.54)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(842,292) scale(0.66)"><g class="sway2" style="animation-delay:1.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(876,296) scale(0.54)"><g class="sway2" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(906,296) scale(0.60)"><g class="sway" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(950,293) scale(0.69)"><g class="sway2" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(980,295) scale(0.64)"><g class="sway" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1001,295) scale(0.57)"><g class="sway2" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1045,295) scale(0.62)"><g class="sway2" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1073,296) scale(0.63)"><g class="sway2" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1104,293) scale(0.66)"><g class="sway" style="animation-delay:1.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1127,294) scale(0.58)"><g class="sway" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1164,296) scale(0.61)"><g class="sway" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1195,294) scale(0.65)"><g class="sway" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <!-- y=306 · 36 bụi -->
+  <g transform="translate(13,305) scale(0.73)"><g class="sway2" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(54,306) scale(0.60)"><g class="sway" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(78,305) scale(0.68)"><g class="sway2" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(115,307) scale(0.73)"><g class="sway" style="animation-delay:0.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(159,309) scale(0.59)"><g class="sway" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(183,305) scale(0.67)"><g class="sway2" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(217,305) scale(0.77)"><g class="sway" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(250,305) scale(0.66)"><g class="sway" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(291,305) scale(0.66)"><g class="sway2" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(329,307) scale(0.76)"><g class="sway" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(356,306) scale(0.60)"><g class="sway2" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(392,305) scale(0.66)"><g class="sway2" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(429,307) scale(0.75)"><g class="sway" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(463,304) scale(0.65)"><g class="sway" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(500,308) scale(0.62)"><g class="sway" style="animation-delay:1.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(531,308) scale(0.65)"><g class="sway2" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(557,308) scale(0.77)"><g class="sway" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(598,304) scale(0.69)"><g class="sway" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(635,305) scale(0.67)"><g class="sway" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(669,308) scale(0.69)"><g class="sway2" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(703,306) scale(0.60)"><g class="sway" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(732,304) scale(0.73)"><g class="sway" style="animation-delay:0.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(774,305) scale(0.64)"><g class="sway2" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(801,307) scale(0.77)"><g class="sway" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(830,307) scale(0.60)"><g class="sway2" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(875,304) scale(0.67)"><g class="sway" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(902,306) scale(0.63)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(942,307) scale(0.77)"><g class="sway2" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(976,304) scale(0.74)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1013,305) scale(0.76)"><g class="sway2" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1042,308) scale(0.65)"><g class="sway" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1079,308) scale(0.74)"><g class="sway" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1104,305) scale(0.66)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1143,305) scale(0.77)"><g class="sway2" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1188,306) scale(0.77)"><g class="sway" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1213,304) scale(0.65)"><g class="sway2" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <!-- y=318 · 33 bụi -->
+  <g transform="translate(10,317) scale(0.87)"><g class="sway2" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(48,317) scale(0.71)"><g class="sway2" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(92,320) scale(0.85)"><g class="sway" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(135,320) scale(0.78)"><g class="sway2" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(165,318) scale(0.73)"><g class="sway2" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(200,319) scale(0.80)"><g class="sway" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(242,317) scale(0.79)"><g class="sway2" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(284,316) scale(0.78)"><g class="sway2" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(314,317) scale(0.70)"><g class="sway2" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(349,319) scale(0.66)"><g class="sway" style="animation-delay:1.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(381,320) scale(0.70)"><g class="sway" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(418,316) scale(0.84)"><g class="sway2" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(466,317) scale(0.66)"><g class="sway" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(505,320) scale(0.86)"><g class="sway" style="animation-delay:1.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(541,319) scale(0.75)"><g class="sway" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(574,319) scale(0.75)"><g class="sway2" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(608,316) scale(0.84)"><g class="sway2" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(654,316) scale(0.68)"><g class="sway" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(677,319) scale(0.67)"><g class="sway" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(722,317) scale(0.76)"><g class="sway2" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(764,317) scale(0.73)"><g class="sway2" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(798,317) scale(0.78)"><g class="sway" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(834,318) scale(0.83)"><g class="sway2" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(861,316) scale(0.74)"><g class="sway" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(914,320) scale(0.69)"><g class="sway" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(938,317) scale(0.73)"><g class="sway" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(988,318) scale(0.72)"><g class="sway2" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1009,320) scale(0.82)"><g class="sway2" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1060,316) scale(0.66)"><g class="sway" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1086,318) scale(0.81)"><g class="sway2" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1131,317) scale(0.86)"><g class="sway" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1172,316) scale(0.71)"><g class="sway" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1199,320) scale(0.77)"><g class="sway2" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <!-- y=331 · 31 bụi -->
+  <g transform="translate(-3,329) scale(0.94)"><g class="sway" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(31,333) scale(0.79)"><g class="sway" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(69,329) scale(0.75)"><g class="sway" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(105,332) scale(0.82)"><g class="sway2" style="animation-delay:1.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(159,330) scale(0.94)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(182,330) scale(0.87)"><g class="sway2" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(224,331) scale(0.81)"><g class="sway" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(269,330) scale(0.84)"><g class="sway2" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(303,332) scale(0.92)"><g class="sway2" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(347,331) scale(0.82)"><g class="sway2" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(391,331) scale(0.83)"><g class="sway2" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(425,330) scale(0.91)"><g class="sway2" style="animation-delay:0.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(468,331) scale(0.82)"><g class="sway2" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(520,330) scale(0.79)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(555,331) scale(0.74)"><g class="sway" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(597,329) scale(0.82)"><g class="sway" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(626,332) scale(0.87)"><g class="sway" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(680,330) scale(0.87)"><g class="sway" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(719,329) scale(0.77)"><g class="sway" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(752,330) scale(0.83)"><g class="sway" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(792,329) scale(0.96)"><g class="sway2" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(840,331) scale(0.75)"><g class="sway2" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(874,332) scale(0.80)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(919,332) scale(0.80)"><g class="sway2" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(957,333) scale(0.83)"><g class="sway2" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(987,329) scale(0.96)"><g class="sway2" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1038,333) scale(0.92)"><g class="sway2" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1068,329) scale(0.76)"><g class="sway" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1104,330) scale(0.91)"><g class="sway" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1159,329) scale(0.85)"><g class="sway2" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1195,333) scale(0.73)"><g class="sway" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <!-- y=344 · 28 bụi -->
+  <g transform="translate(15,345) scale(0.88)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(51,344) scale(0.84)"><g class="sway" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(96,343) scale(1.01)"><g class="sway" style="animation-delay:1.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(148,344) scale(0.99)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(191,345) scale(0.89)"><g class="sway" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(232,346) scale(1.04)"><g class="sway2" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(275,346) scale(1.03)"><g class="sway2" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(317,344) scale(0.94)"><g class="sway" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(357,346) scale(0.89)"><g class="sway2" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(403,346) scale(0.93)"><g class="sway" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(443,345) scale(1.02)"><g class="sway" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(492,343) scale(0.87)"><g class="sway2" style="animation-delay:1.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(545,346) scale(0.94)"><g class="sway" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(571,347) scale(0.91)"><g class="sway" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(616,346) scale(1.04)"><g class="sway" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(659,343) scale(0.80)"><g class="sway" style="animation-delay:0.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(713,345) scale(1.06)"><g class="sway2" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(753,346) scale(1.02)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(787,345) scale(0.82)"><g class="sway" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(833,347) scale(0.85)"><g class="sway2" style="animation-delay:0.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(873,346) scale(1.01)"><g class="sway" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(924,344) scale(0.84)"><g class="sway" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(960,347) scale(0.91)"><g class="sway" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1003,345) scale(0.87)"><g class="sway" style="animation-delay:0.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1052,347) scale(0.90)"><g class="sway" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1088,345) scale(0.82)"><g class="sway2" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1141,344) scale(0.90)"><g class="sway2" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1175,347) scale(0.81)"><g class="sway" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <!-- y=359 · 26 bụi -->
+  <g transform="translate(42,361) scale(1.09)"><g class="sway" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(87,360) scale(0.92)"><g class="sway2" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(127,361) scale(1.06)"><g class="sway2" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(181,360) scale(1.08)"><g class="sway" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(219,357) scale(1.05)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(272,359) scale(0.90)"><g class="sway" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(308,361) scale(0.96)"><g class="sway" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(355,360) scale(1.14)"><g class="sway" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(397,359) scale(1.16)"><g class="sway" style="animation-delay:0.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(461,361) scale(1.09)"><g class="sway" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(492,361) scale(1.15)"><g class="sway" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(546,359) scale(0.91)"><g class="sway" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(600,361) scale(1.11)"><g class="sway" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(635,357) scale(1.01)"><g class="sway2" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(677,357) scale(1.14)"><g class="sway2" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(722,359) scale(1.13)"><g class="sway2" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(771,361) scale(1.12)"><g class="sway" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(820,361) scale(1.14)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(876,362) scale(1.17)"><g class="sway2" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(923,359) scale(1.12)"><g class="sway" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(975,360) scale(1.13)"><g class="sway" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1013,357) scale(1.14)"><g class="sway2" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1051,358) scale(1.07)"><g class="sway2" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1103,360) scale(0.95)"><g class="sway" style="animation-delay:1.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1161,362) scale(1.06)"><g class="sway2" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1188,357) scale(1.13)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <!-- y=375 · 24 bụi -->
+  <g transform="translate(9,375) scale(1.11)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(75,373) scale(1.13)"><g class="sway" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(124,375) scale(1.25)"><g class="sway2" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(160,374) scale(1.11)"><g class="sway" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(212,377) scale(1.17)"><g class="sway2" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(271,374) scale(1.05)"><g class="sway2" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(324,377) scale(1.22)"><g class="sway2" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(374,377) scale(1.03)"><g class="sway2" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(428,376) scale(1.02)"><g class="sway2" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(475,373) scale(1.23)"><g class="sway" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(519,374) scale(1.12)"><g class="sway2" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(579,373) scale(1.01)"><g class="sway" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(623,373) scale(1.17)"><g class="sway" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(658,374) scale(1.22)"><g class="sway" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(718,373) scale(1.11)"><g class="sway2" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(773,375) scale(1.05)"><g class="sway2" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(820,375) scale(1.27)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(878,376) scale(1.06)"><g class="sway2" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(913,374) scale(1.04)"><g class="sway2" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(971,377) scale(1.09)"><g class="sway2" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1019,377) scale(1.20)"><g class="sway2" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1065,377) scale(1.18)"><g class="sway" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1129,377) scale(1.14)"><g class="sway2" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1170,373) scale(1.00)"><g class="sway" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <!-- y=391 · 23 bụi -->
+  <g transform="translate(-21,391) scale(1.09)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(31,390) scale(1.12)"><g class="sway2" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(94,394) scale(1.30)"><g class="sway" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(155,392) scale(1.24)"><g class="sway" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(207,392) scale(1.14)"><g class="sway" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(247,390) scale(1.35)"><g class="sway" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(309,391) scale(1.15)"><g class="sway2" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(376,390) scale(1.14)"><g class="sway" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(429,393) scale(1.32)"><g class="sway2" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(478,391) scale(1.08)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(536,394) scale(1.28)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(591,392) scale(1.38)"><g class="sway" style="animation-delay:1.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(636,392) scale(1.20)"><g class="sway" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(695,392) scale(1.38)"><g class="sway" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(733,391) scale(1.22)"><g class="sway" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(810,393) scale(1.39)"><g class="sway" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(858,390) scale(1.21)"><g class="sway2" style="animation-delay:1.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(903,391) scale(1.20)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(950,391) scale(1.24)"><g class="sway2" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1008,390) scale(1.34)"><g class="sway2" style="animation-delay:0.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1063,392) scale(1.31)"><g class="sway" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1124,392) scale(1.39)"><g class="sway2" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1175,392) scale(1.23)"><g class="sway" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <!-- y=409 · 21 bụi -->
+  <g transform="translate(20,409) scale(1.16)"><g class="sway" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(53,411) scale(1.45)"><g class="sway2" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(111,408) scale(1.37)"><g class="sway2" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(176,408) scale(1.51)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(252,408) scale(1.51)"><g class="sway" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(287,412) scale(1.35)"><g class="sway" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(364,408) scale(1.21)"><g class="sway2" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(406,411) scale(1.37)"><g class="sway2" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(480,412) scale(1.49)"><g class="sway2" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(532,409) scale(1.43)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(588,410) scale(1.23)"><g class="sway" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(644,407) scale(1.23)"><g class="sway" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(704,409) scale(1.49)"><g class="sway2" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(765,410) scale(1.24)"><g class="sway" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(816,408) scale(1.20)"><g class="sway" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(878,409) scale(1.36)"><g class="sway" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(948,408) scale(1.27)"><g class="sway2" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(995,410) scale(1.23)"><g class="sway2" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1055,411) scale(1.33)"><g class="sway" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1101,411) scale(1.47)"><g class="sway2" style="animation-delay:1.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1180,408) scale(1.37)"><g class="sway2" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <!-- y=428 · 20 bụi -->
+  <g transform="translate(17,431) scale(1.40)"><g class="sway2" style="animation-delay:0.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(84,427) scale(1.32)"><g class="sway2" style="animation-delay:1.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(152,427) scale(1.38)"><g class="sway" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(204,427) scale(1.44)"><g class="sway" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(280,429) scale(1.51)"><g class="sway2" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(335,430) scale(1.64)"><g class="sway" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(390,426) scale(1.53)"><g class="sway" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(479,430) scale(1.39)"><g class="sway2" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(520,430) scale(1.64)"><g class="sway" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(601,427) scale(1.44)"><g class="sway2" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(642,429) scale(1.29)"><g class="sway2" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(703,429) scale(1.33)"><g class="sway" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(785,430) scale(1.50)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(838,427) scale(1.40)"><g class="sway2" style="animation-delay:1.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(892,429) scale(1.52)"><g class="sway" style="animation-delay:1.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(967,426) scale(1.53)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1019,426) scale(1.30)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1084,427) scale(1.35)"><g class="sway2" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1165,428) scale(1.54)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1224,429) scale(1.40)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <!-- y=448 · 18 bụi -->
+  <g transform="translate(45,447) scale(1.63)"><g class="sway2" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(98,451) scale(1.78)"><g class="sway2" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(163,449) scale(1.78)"><g class="sway2" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(252,451) scale(1.58)"><g class="sway2" style="animation-delay:0.8s"><use href="#d_bush"/></g></g>
+  <g transform="translate(318,447) scale(1.53)"><g class="sway" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(370,450) scale(1.71)"><g class="sway" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(451,446) scale(1.66)"><g class="sway" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(525,447) scale(1.79)"><g class="sway2" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(581,449) scale(1.37)"><g class="sway2" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(648,451) scale(1.69)"><g class="sway" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(714,451) scale(1.44)"><g class="sway2" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(793,449) scale(1.63)"><g class="sway2" style="animation-delay:0.7s"><use href="#d_bush"/></g></g>
+  <g transform="translate(844,448) scale(1.54)"><g class="sway2" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(905,448) scale(1.72)"><g class="sway" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(970,447) scale(1.51)"><g class="sway2" style="animation-delay:1.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1061,450) scale(1.53)"><g class="sway2" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1105,450) scale(1.48)"><g class="sway" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1173,451) scale(1.49)"><g class="sway2" style="animation-delay:0.2s"><use href="#d_bush"/></g></g>
+  <!-- y=470 · 17 bụi -->
+  <g transform="translate(23,468) scale(1.77)"><g class="sway" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(119,472) scale(1.68)"><g class="sway2" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(193,469) scale(1.74)"><g class="sway" style="animation-delay:0.6s"><use href="#d_bush"/></g></g>
+  <g transform="translate(250,470) scale(1.55)"><g class="sway" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(332,471) scale(1.84)"><g class="sway2" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(384,469) scale(1.78)"><g class="sway" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(477,469) scale(1.50)"><g class="sway" style="animation-delay:0.0s"><use href="#d_bush"/></g></g>
+  <g transform="translate(533,469) scale(1.55)"><g class="sway" style="animation-delay:1.2s"><use href="#d_bush"/></g></g>
+  <g transform="translate(620,471) scale(1.93)"><g class="sway2" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(671,468) scale(1.67)"><g class="sway2" style="animation-delay:1.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(745,470) scale(1.79)"><g class="sway" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(818,472) scale(1.91)"><g class="sway" style="animation-delay:0.4s"><use href="#d_bush"/></g></g>
+  <g transform="translate(901,470) scale(1.80)"><g class="sway" style="animation-delay:0.5s"><use href="#d_bush"/></g></g>
+  <g transform="translate(984,470) scale(1.51)"><g class="sway2" style="animation-delay:1.1s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1032,471) scale(1.72)"><g class="sway" style="animation-delay:1.3s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1129,472) scale(1.66)"><g class="sway2" style="animation-delay:0.9s"><use href="#d_bush"/></g></g>
+  <g transform="translate(1187,468) scale(1.53)"><g class="sway2" style="animation-delay:0.1s"><use href="#d_bush"/></g></g>
+</g>
+
+<!-- ══ FARMER + BUFFALO ══ -->
+<!-- morning: out to the fields (left → right) -->
+<g class="droveOut"><g transform="translate(0,398) scale(1.15)"><g class="droveOutO"><use href="#d_drover"/></g></g></g>
+<!-- evening: back home (right → left, facing left) -->
+<g class="droveBack"><g transform="translate(0,398) scale(1.15)"><g class="droveBackO"><g transform="scale(-1,1)"><use href="#d_drover"/></g></g></g></g>
+
+<!-- ══ VILLAGE HOUSE (at the foot of the banyan) ══ -->
+<g>
+  <polygon points="82,262 208,262 188,232 102,232" fill="#3a2416"/>
+  <polygon points="82,262 208,262 202,269 88,269" fill="#241609"/>
+  <rect x="100" y="269" width="90" height="35" fill="#4a3826"/>
+  <rect x="100" y="269" width="90" height="4" fill="#5c4832"/>
+  <rect x="124" y="282" width="16" height="22" fill="#1a1208"/>
+  <rect x="160" y="280" width="19" height="14" fill="#1a1208"/>
+</g>
+
+<!-- ══ NIGHT WASH (darkens the whole scene) ══ -->
+<rect class="nightWash" width="1200" height="480" fill="url(#d_night)"/>
+
+<!-- warm windows that light up after dark -->
+<g class="nightUp">
+  <ellipse cx="169" cy="287" rx="30" ry="18" fill="url(#d_sun)" opacity="0.45"/>
+  <ellipse cx="132" cy="293" rx="22" ry="15" fill="url(#d_sun)" opacity="0.4"/>
+  <rect x="162" y="282" width="15" height="10" fill="#ffcf6e"/>
+  <rect x="126" y="284" width="12" height="18" fill="#ffbe52"/>
+</g>
+
+<!-- stars + moon (shine above the night wash) -->
+<g class="nightUp" fill="#ffffff">
+  <circle cx="120" cy="60" r="1.4"/><circle cx="240" cy="40" r="1"/><circle cx="330" cy="90" r="1.2"/>
+  <circle cx="470" cy="55" r="1.3"/><circle cx="560" cy="30" r="1"/><circle cx="700" cy="70" r="1.2"/>
+  <circle cx="820" cy="44" r="1.4"/><circle cx="1050" cy="60" r="1.1"/><circle cx="1140" cy="36" r="1.3"/>
+  <circle cx="180" cy="130" r="1"/><circle cx="620" cy="120" r="1"/><circle cx="990" cy="120" r="1.1"/>
+  <circle cx="390" cy="150" r="0.9"/><circle cx="880" cy="150" r="0.9"/>
+</g>
+<g class="nightUp">
+  <circle cx="985" cy="105" r="70" fill="url(#d_sun)" opacity="0.5"/>
+  <circle cx="985" cy="105" r="30" fill="url(#d_moon)"/>
+  <circle cx="998" cy="96" r="5" fill="#c8d4ea" opacity="0.5"/>
+  <circle cx="975" cy="115" r="4" fill="#c8d4ea" opacity="0.45"/>
+</g>
+
+<!-- ══ FOREGROUND GRASS ══ -->
+<g clip-path="url(#d_fieldClip)">
+  <g stroke="#c9c257" stroke-width="2.4" stroke-linecap="round" fill="none" opacity="0.7">
+    <g class="sway"><path d="M60,480 C58,458 66,448 60,436"/></g>
+    <g class="sway2"><path d="M520,480 C522,458 514,448 522,436"/></g>
+    <g class="sway"><path d="M980,480 C982,458 974,448 982,436"/></g>
+  </g>
+</g>
+
+<!-- wordmark bỏ đi: banner để trống, không chữ -->
+</svg>
