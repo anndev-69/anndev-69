@@ -30,11 +30,35 @@ _Go far, stay rooted._
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:7C3AED,50:A855F7,100:22D3EE&height=3&section=header" />
 
 <!-- ░░░ ABOUT ░░░ -->
-## 🌾 About · Đôi lời
+## <img src="https://raw.githubusercontent.com/anndev-69/anndev-69/main/assets/mouse-typing.svg" width="30" align="top" alt="" /> About · Đôi lời
 
-**EN** — I grew up on rice from home, carried forward by family, school, and a lot of quiet work. Today I build clean web systems, automation tools, and Shopify solutions that actually ship. The tools are modern; the way I work stays grounded — learn carefully, build honestly, leave things better than I found them.
+<!-- Hai ngôn ngữ đặt song song cho cân, thay vì xếp chồng hai đoạn. -->
+<table>
+<tr>
+<td width="50%" valign="top">
 
-**VI** — Mình lớn lên từ hạt gạo quê nhà, được gia đình nuôi lớn và chuyện học hành mở lối. Bây giờ mình làm hệ thống web gọn gàng, công cụ tự động hóa và giải pháp Shopify chạy được thật. Công nghệ có thể đi rất xa, nhưng cách làm nghề vẫn mộc mạc: học cho tới nơi, làm cho tới chốn, và không quên nơi mình bắt đầu.
+**🇬🇧 English**
+
+I grew up on rice from home, carried forward by family, school, and a lot of quiet work.
+
+Today I build clean web systems, automation tools, and Shopify solutions that actually ship.
+
+The tools are modern; the way I work stays grounded — learn carefully, build honestly, leave things better than I found them.
+
+</td>
+<td width="50%" valign="top">
+
+**🇻🇳 Tiếng Việt**
+
+Mình lớn lên từ hạt gạo quê nhà, được gia đình nuôi lớn và chuyện học hành mở lối.
+
+Bây giờ mình làm hệ thống web gọn gàng, công cụ tự động hóa và giải pháp Shopify chạy được thật.
+
+Công nghệ có thể đi rất xa, nhưng cách làm nghề vẫn mộc mạc: học cho tới nơi, làm cho tới chốn, và không quên nơi mình bắt đầu.
+
+</td>
+</tr>
+</table>
 
 <div align="center">
 
