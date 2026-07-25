@@ -30,7 +30,7 @@ _Go far, stay rooted._
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:7C3AED,50:A855F7,100:22D3EE&height=3&section=header" />
 
 <!-- ░░░ ABOUT ░░░ -->
-## <img src="https://raw.githubusercontent.com/anndev-69/anndev-69/b85662f2496151c2c134a7062175bd742c8cbcda/assets/mouse-typing.svg" width="30" align="top" alt="" /> About · Đôi lời
+## <img src="https://raw.githubusercontent.com/anndev-69/anndev-69/b85662f2496151c2c134a7062175bd742c8cbcda/assets/mouse-typing.svg" width="30" align="top" alt="" /> About
 
 <!-- Icon trỏ theo commit SHA nên main không cần giữ thư mục assets/ -->
 
@@ -68,7 +68,7 @@ _“Đi xa để mở mang tầm mắt, giữ quê nhà để lòng mình có ch
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:22D3EE,50:A855F7,100:7C3AED&height=3&section=header" />
 
 <!-- ░░░ TECH STACK ░░░ -->
-## 🛠 Tech Stack · Công nghệ
+## 🛠 Tech Stack
 
 > Người quê chọn giống, giữ nước, đợi mùa. Làm phần mềm cũng vậy — chọn đúng công cụ, chăm từng chi tiết, và đủ kiên nhẫn để sản phẩm thành hình.
 
@@ -112,7 +112,7 @@ _“Đi xa để mở mang tầm mắt, giữ quê nhà để lòng mình có ch
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:7C3AED,50:A855F7,100:22D3EE&height=3&section=header" />
 
 <!-- ░░░ PROJECTS ░░░ -->
-## 🌱 Featured · Dự án nổi bật
+## 🌱 Featured
 
 > Sản phẩm tốt phải làm được việc trước khi kể được chuyện hay.
 
@@ -124,7 +124,7 @@ _“Đi xa để mở mang tầm mắt, giữ quê nhà để lòng mình có ch
 
 </div>
 
-**Open-source contributions · Đóng góp mã nguồn mở**
+**Open-source contributions**
 
 - [`decolua/9router`](https://github.com/decolua/9router) — `feat(xai)`: Grok Imagine video generation (`/v1/videos`) + CLI
 
@@ -136,7 +136,7 @@ _“Đi xa để mở mang tầm mắt, giữ quê nhà để lòng mình có ch
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:22D3EE,50:A855F7,100:7C3AED&height=3&section=header" />
 
 <!-- ░░░ STATS ░░░ -->
-## 📊 Stats · Thống kê
+## 📊 Stats
 
 _Mỗi ô xanh là một ngày vun xới. Không phải mùa nào cũng rực rỡ, nhưng còn học còn làm thì vẫn còn lớn lên._
 
@@ -166,7 +166,7 @@ _Mỗi ô xanh là một ngày vun xới. Không phải mùa nào cũng rực r�
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:7C3AED,50:A855F7,100:22D3EE&height=3&section=header" />
 
 <!-- ░░░ CONNECT ░░░ -->
-## 📬 Connect · Liên hệ
+## 📬 Connect
 
 _Bạn thích làm sản phẩm tử tế, hay chỉ muốn nói chuyện công nghệ bên một tách trà — mình luôn vui được kết nối._
 
