@@ -30,37 +30,36 @@ _Go far, stay rooted._
 <img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:7C3AED,50:A855F7,100:22D3EE&height=3&section=header" />
 
 <!-- ░░░ ABOUT ░░░ -->
-## <img src="https://raw.githubusercontent.com/anndev-69/anndev-69/main/assets/mouse-typing.svg" width="30" align="top" alt="" /> About · Đôi lời
+## <img src="https://raw.githubusercontent.com/anndev-69/anndev-69/b85662f2496151c2c134a7062175bd742c8cbcda/assets/mouse-typing.svg" width="30" align="top" alt="" /> About · Đôi lời
 
-<!-- Hai ngôn ngữ đặt song song cho cân, thay vì xếp chồng hai đoạn. -->
+<!-- Icon trỏ theo commit SHA nên main không cần giữ thư mục assets/ -->
+
 <table>
 <tr>
-<td width="50%" valign="top">
+<td valign="top">
 
-**🇬🇧 English**
+I grew up on rice from home — carried forward by family, by school, and by a lot of quiet work that nobody claps for.
 
-I grew up on rice from home, carried forward by family, school, and a lot of quiet work.
+Today I build **clean web systems**, **automation tools**, and **Shopify solutions** that actually ship. Not demos. Things people use on a Tuesday.
 
-Today I build clean web systems, automation tools, and Shopify solutions that actually ship.
-
-The tools are modern; the way I work stays grounded — learn carefully, build honestly, leave things better than I found them.
+The tools are modern. The way I work stays grounded: learn carefully, build honestly, and leave things better than I found them.
 
 </td>
-<td width="50%" valign="top">
+<td width="150" align="center" valign="middle">
 
-**🇻🇳 Tiếng Việt**
-
-Mình lớn lên từ hạt gạo quê nhà, được gia đình nuôi lớn và chuyện học hành mở lối.
-
-Bây giờ mình làm hệ thống web gọn gàng, công cụ tự động hóa và giải pháp Shopify chạy được thật.
-
-Công nghệ có thể đi rất xa, nhưng cách làm nghề vẫn mộc mạc: học cho tới nơi, làm cho tới chốn, và không quên nơi mình bắt đầu.
+<img width="118" src="https://raw.githubusercontent.com/anndev-69/anndev-69/b85662f2496151c2c134a7062175bd742c8cbcda/assets/mouse-typing.svg" alt="A little mouse hammering away at a keyboard" />
 
 </td>
 </tr>
 </table>
 
 <div align="center">
+
+<img src="https://img.shields.io/badge/CLEAN%20WEB%20SYSTEMS-0D1117?style=flat-square&labelColor=0D1117&color=A855F7" />
+<img src="https://img.shields.io/badge/AUTOMATION-0D1117?style=flat-square&labelColor=0D1117&color=22D3EE" />
+<img src="https://img.shields.io/badge/SHOPIFY-0D1117?style=flat-square&labelColor=0D1117&color=F472B6" />
+
+<br/><br/>
 
 _“Đi xa để mở mang tầm mắt, giữ quê nhà để lòng mình có chốn quay về.”_
 
