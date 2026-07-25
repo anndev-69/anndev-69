@@ -9,7 +9,7 @@
 <!-- ░░░ HERO — Đồng Quê: a full day over the rice terraces (animated SVG) ░░░ -->
 <!-- Pinned to the original asset commit so main stays minimal: only README.md + .github/ -->
 <div align="center">
-  <img width="100%" src="https://raw.githubusercontent.com/anndev-69/anndev-69/0deea1ec166522f6b188b08e5a672dae933857df/assets/rice-day-night.svg" alt="Terraced paddies carpeted in rice through a full day — a farmer leads a water buffalo out at dawn, white egrets glide over the golden fields at noon, and the village house lights up beside the old banyan tree at night" />
+  <img width="100%" src="https://raw.githubusercontent.com/anndev-69/anndev-69/86fd93806ff4c3f1a2b53550c0716219f72fca32/assets/rice-day-night.svg" alt="Terraced paddies carpeted in rice through a full day — a farmer leads a water buffalo out at dawn, white egrets glide over the golden fields at noon, and the village house lights up beside the old banyan tree at night" />
 </div>
 
 <!-- ░░░ TYPING ░░░ -->
@@ -148,6 +148,7 @@ _Mỗi ô xanh là một ngày vun xới. Không phải mùa nào cũng rực r�
 
 <br/><br/>
 
+<!-- Snake: bảng màu đặt trong .github/workflows/snake.yml -->
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/anndev-69/anndev-69/output/github-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/anndev-69/anndev-69/output/github-snake.svg" />
