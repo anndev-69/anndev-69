@@ -9,7 +9,7 @@
 <!-- ░░░ HERO — Đồng Quê: a full day over the rice terraces (animated SVG) ░░░ -->
 <!-- Pinned to the original asset commit so main stays minimal: only README.md + .github/ -->
 <div align="center">
-  <img width="100%" src="https://raw.githubusercontent.com/anndev-69/anndev-69/b9d7771449f88580eac67c5a8c1f67afc559b664/assets/rice-day-night.svg" alt="Terraced rice paddies through a full day — a farmer leads a water buffalo out at dawn, white egrets glide over the golden fields at noon, and the village house lights up beside the old banyan tree at night" />
+  <img width="100%" src="https://raw.githubusercontent.com/anndev-69/anndev-69/020a2b9e3e7fbbdc9530ba07349be892ef639367/assets/rice-day-night.svg" alt="Terraced paddies carpeted in rice through a full day — a farmer leads a water buffalo out at dawn, white egrets glide over the golden fields at noon, and the village house lights up beside the old banyan tree at night" />
 </div>
 
 <!-- ░░░ TYPING ░░░ -->
@@ -34,17 +34,17 @@ _Go far, stay rooted._
 
 <!-- Icon tiêu đề trỏ theo commit SHA nên main không cần giữ thư mục assets/ -->
 
-I grew up on rice from home. Family raised me, school pointed me forward, and the rest was a lot of quiet work nobody claps for.
+I was raised by rice — by seasons that only pay whoever shows up every single day, and by parents who showed up without ever being asked.
 
-These days I build **clean web systems**, **automation tools**, and **Shopify solutions** that actually ship. Not demos, not screenshots — things people open on a Tuesday morning and never have to think about.
+School carried me past the dyke roads. Code carried me further still. Now I build **clean web systems**, **automation tools**, and **Shopify solutions** that actually ship — not demos, but the quiet kind of software people lean on without noticing it is there.
 
-The tools keep changing. The way I work doesn't: learn it properly, build it honestly, leave it better than I found it.
+I never left in order to get away. Whatever I learn out here comes home with me, because the point was always the same: come back able to build something for the place that grew me.
 
-> Mình lớn lên từ hạt gạo quê nhà. Gia đình nuôi lớn, trường lớp mở lối, còn lại là những mùa làm lụng lặng lẽ chẳng ai vỗ tay.
+> Mình lớn lên bằng cây lúa — bằng những mùa chỉ trả công cho người chịu ra đồng mỗi ngày, và bằng cha mẹ ra đồng mà chẳng ai phải nhắc.
 >
-> Giờ mình làm hệ thống web gọn gàng, công cụ tự động hóa, giải pháp Shopify — thứ chạy được thật, không phải bản trình diễn.
+> Con chữ đưa mình qua khỏi bờ đê. Dòng code đưa mình đi xa hơn nữa. Giờ mình làm hệ thống web gọn gàng, công cụ tự động hóa, giải pháp Shopify — thứ chạy được thật, lặng lẽ gánh việc cho người dùng.
 >
-> Công nghệ thì đổi từng mùa. Cách làm nghề thì không: học cho tới nơi, làm cho tới chốn, và không quên nơi mình bắt đầu.
+> Nhưng đi chưa bao giờ là để rời đi. Học được gì ngoài kia, mình mang về bấy nhiêu — bởi đích đến vẫn là ngày quay lại, đủ sức góp tay dựng lấy quê mình.
 
 <div align="center">
 
