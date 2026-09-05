@@ -1,176 +1,105 @@
-<!--
-  ╔══════════════════════════════════════════════════════════════╗
-  ║   anndev-69 — GitHub Profile README                          ║
-  ║   Theme: Đồng Quê Neon — mộc mạc, hiện đại, có gốc có nghề   ║
-  ║   Repo: anndev-69/anndev-69  (public, file: README.md)       ║
-  ╚══════════════════════════════════════════════════════════════╝
--->
-
-<!-- ░░░ HERO — Đồng Quê: a full day over the rice terraces (animated SVG) ░░░ -->
-<!-- Pinned to the original asset commit so main stays minimal: only README.md + .github/ -->
 <div align="center">
-  <img width="100%" src="https://raw.githubusercontent.com/anndev-69/anndev-69/86fd93806ff4c3f1a2b53550c0716219f72fca32/assets/rice-day-night.svg" alt="Terraced paddies carpeted in rice through a full day — a farmer leads a water buffalo out at dawn, white egrets glide over the golden fields at noon, and the village house lights up beside the old banyan tree at night" />
+  <img width="100%" src="assets/rice-day-night.svg" alt="Một ngày trên đồng lúa quê nhà: bình minh, cánh cò, người nông dân và ánh đèn làng khi đêm xuống." />
+  <img width="100%" src="assets/identity.svg" alt="An Nguyen — Go far. Stay rooted. Full-stack development · Automation · Shopify. Việt Nam." />
+
+  **[Website](https://annguyen.com)** · **[Projects](#selected-work)** · **[Activity](#activity)** · **[Connect](#connect)**
+
+  _Từ hạt gạo quê nhà đến những dòng code đi xa._
 </div>
 
-<!-- ░░░ TYPING ░░░ -->
-<div align="center">
+## Hello, I'm An
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1100&color=A855F7&center=true&vCenter=true&width=820&height=70&lines=T%E1%BB%AB+h%E1%BA%A1t+g%E1%BA%A1o+qu%C3%AA+nh%C3%A0+%C4%91%E1%BA%BFn+nh%E1%BB%AFng+d%C3%B2ng+code+%C4%91i+xa;%C4%82n+h%E1%BB%8Dc+n%C3%AAn+ng%C6%B0%E1%BB%9Di+%C2%B7+L%C3%A0m+ngh%E1%BB%81+n%C3%AAn+chuy%E1%BB%87n;Clean+systems+%C2%B7+Humble+roots+%C2%B7+Software+that+ships)](https://anguyen.com)
+I build **clean web systems**, **automation tools**, and **Shopify solutions** that actually ship. I care about software that is useful, understandable, and dependable in everyday work.
 
-**ANN-Dev** · Full-stack Developer · web systems, automation, Shopify
-<br/>
-_Go far, stay rooted._
+🌾 **Raised by rice fields. Shaped by learning. Building with care.**
 
-<img src="https://img.shields.io/badge/BASED%20IN-VI%E1%BB%86T%20NAM-22D3EE?style=for-the-badge&labelColor=0D1117" />
-<img src="https://img.shields.io/github/followers/anndev-69?label=FOLLOWERS&style=for-the-badge&color=A855F7&labelColor=0D1117" />
-<img src="https://komarev.com/ghpvc/?username=anndev-69&label=PROFILE+VIEWS&color=7C3AED&style=for-the-badge" />
+Mình lớn lên bằng cây lúa — bằng những mùa chỉ trả công cho người chịu ra đồng mỗi ngày, và bằng cha mẹ ra đồng mà chẳng ai phải nhắc. Con chữ đưa mình qua khỏi bờ đê. Dòng code đưa mình đi xa hơn nữa.
 
-</div>
+> Đi xa để mở mang tầm mắt, giữ quê nhà để lòng mình có chốn quay về.
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:7C3AED,50:A855F7,100:22D3EE&height=3&section=header" />
+<details>
+<summary><strong>A little more about my roots</strong></summary>
 
-<!-- ░░░ ABOUT ░░░ -->
-## <img src="https://raw.githubusercontent.com/anndev-69/anndev-69/b85662f2496151c2c134a7062175bd742c8cbcda/assets/mouse-typing.svg" width="30" align="top" alt="" /> About
-
-<!-- Icon tiêu đề trỏ theo commit SHA nên main không cần giữ thư mục assets/ -->
-
-I was raised by rice — by seasons that only pay whoever shows up every single day, and by parents who showed up without ever being asked.
-
-School carried me past the dyke roads. Code carried me further still. Now I build **clean web systems**, **automation tools**, and **Shopify solutions** that actually ship — not demos, but the quiet kind of software people lean on without noticing it is there.
+School carried me past the dyke roads. Code carried me further still. Now I build the quiet kind of software people lean on without noticing it is there.
 
 I never left in order to get away. Whatever I learn out here comes home with me, because the point was always the same: come back able to build something for the place that grew me.
 
-> Mình lớn lên bằng cây lúa — bằng những mùa chỉ trả công cho người chịu ra đồng mỗi ngày, và bằng cha mẹ ra đồng mà chẳng ai phải nhắc.
->
-> Con chữ đưa mình qua khỏi bờ đê. Dòng code đưa mình đi xa hơn nữa. Giờ mình làm hệ thống web gọn gàng, công cụ tự động hóa, giải pháp Shopify — thứ chạy được thật, lặng lẽ gánh việc cho người dùng.
->
-> Nhưng đi chưa bao giờ là để rời đi. Học được gì ngoài kia, mình mang về bấy nhiêu — bởi đích đến vẫn là ngày quay lại, đủ sức góp tay dựng lấy quê mình.
+Nhưng đi chưa bao giờ là để rời đi. Học được gì ngoài kia, mình mang về bấy nhiêu — bởi đích đến vẫn là ngày quay lại, đủ sức góp tay dựng lấy quê mình.
 
-<div align="center">
+</details>
 
-<img src="https://img.shields.io/badge/CLEAN%20WEB%20SYSTEMS-0D1117?style=flat-square&labelColor=0D1117&color=A855F7" />
-<img src="https://img.shields.io/badge/AUTOMATION-0D1117?style=flat-square&labelColor=0D1117&color=22D3EE" />
-<img src="https://img.shields.io/badge/SHOPIFY-0D1117?style=flat-square&labelColor=0D1117&color=F472B6" />
+## What I build
 
-<br/><br/>
+| Web systems | Automation | Commerce |
+| :--- | :--- | :--- |
+| Clear interfaces and practical backend services. | Tools that connect APIs and take repetitive work off people's hands. | Shopify solutions built around everyday store workflows. |
+| **Frontend ↔ API ↔ Data** | **Integrations · Scripts · CLI** | **Shopify · Custom workflows** |
 
-_“Đi xa để mở mang tầm mắt, giữ quê nhà để lòng mình có chốn quay về.”_
+## Selected work
 
-</div>
-
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:22D3EE,50:A855F7,100:7C3AED&height=3&section=header" />
-
-<!-- ░░░ TECH STACK ░░░ -->
-## 🛠 Tech Stack
-
-> Người quê chọn giống, giữ nước, đợi mùa. Làm phần mềm cũng vậy — chọn đúng công cụ, chăm từng chi tiết, và đủ kiên nhẫn để sản phẩm thành hình.
-
-<div align="center">
-
-`Core`
-
-<img src="https://skillicons.dev/icons?i=ts,js,python,php,go,nodejs,bash&theme=dark&perline=7" />
-
-<br/>
-
-`Frontend`
-
-<img src="https://skillicons.dev/icons?i=react,nextjs,vue,tailwind,sass,vite,html,css&theme=dark&perline=8" />
-
-<br/>
-
-`Backend & Data`
-
-<img src="https://skillicons.dev/icons?i=express,nestjs,laravel,django,postgres,mysql,mongodb,redis&theme=dark&perline=8" />
-
-<br/>
-
-`Platform & Ops`
-
-<img src="https://skillicons.dev/icons?i=git,docker,kubernetes,aws,cloudflare,vercel,linux,figma&theme=dark&perline=8" />
-<br/>
-<img src="https://img.shields.io/badge/Shopify-0D1117?style=for-the-badge&logo=shopify&logoColor=22D3EE" />
-
-<br/><br/>
-
-`AI Platforms`
-
-<img src="https://img.shields.io/badge/Claude%20Code-0D1117?style=for-the-badge&logo=anthropic&logoColor=22D3EE" />
-<img src="https://img.shields.io/badge/OpenAI-0D1117?style=for-the-badge&logo=openai&logoColor=A855F7" />
-<img src="https://img.shields.io/badge/xAI%20Grok-0D1117?style=for-the-badge&logo=x&logoColor=F472B6" />
-<img src="https://img.shields.io/badge/Gemini-0D1117?style=for-the-badge&logo=googlegemini&logoColor=A855F7" />
-
-</div>
-
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:7C3AED,50:A855F7,100:22D3EE&height=3&section=header" />
-
-<!-- ░░░ PROJECTS ░░░ -->
-## 🌱 Featured
-
-> Sản phẩm tốt phải làm được việc trước khi kể được chuyện hay.
-
-<div align="center">
-
-<a href="https://github.com/decolua/9router">
-  <img width="70%" src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=decolua&repo=9router&hide_border=true&bg_color=0D1117&title_color=A855F7&icon_color=22D3EE&text_color=C9D1D9" />
+<a href="https://github.com/anndev-69/9router">
+  <img width="100%" src="assets/featured-9router.svg" alt="9router — my contributor fork of decolua/9router, exploring AI integrations, video workflows and developer tools. Open the repository." />
 </a>
 
-</div>
+**[My fork](https://github.com/anndev-69/9router)** · **[Upstream project](https://github.com/decolua/9router)** · **[All my pull requests](https://github.com/pulls?q=is%3Apr+author%3Aanndev-69)**
 
-**Open-source contributions**
+### Contributions & experiments
 
-- [`decolua/9router`](https://github.com/decolua/9router) — `feat(xai)`: Grok Imagine video generation (`/v1/videos`) + CLI
+A closer look at the changes I've proposed to **9router**:
 
-<!--
-  Thêm repo mới sau này: copy khối <a> ở trên, đổi username=... & repo=TÊN_REPO.
-  Muốn 2 card nằm cạnh nhau thì đổi width="70%" thành width="49%".
--->
+| Work | What I explored | Links |
+| :--- | :--- | :--- |
+| **Grok Imagine video** | Video generation endpoints, async job handling and a CLI workflow. | [PR #2593](https://github.com/decolua/9router/pull/2593) |
+| **Codex image aliases** | Model discovery, image routing and regression coverage for Sol, Terra and Luna aliases. | [PR #3806](https://github.com/decolua/9router/pull/3806) |
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:22D3EE,50:A855F7,100:7C3AED&height=3&section=header" />
+<sub>These are proposed contributions. Both PRs were closed without merge at the time of this profile refresh; follow the links for current status.</sub>
 
-<!-- ░░░ STATS ░░░ -->
-## 📊 Stats
+## Toolbox
 
-_Mỗi ô xanh là một ngày vun xới. Không phải mùa nào cũng rực rỡ, nhưng còn học còn làm thì vẫn còn lớn lên._
+The tools in my stack, grouped by the work they help me do.
 
-<div align="center">
+| Area | Technologies |
+| :--- | :--- |
+| **Languages** | TypeScript · JavaScript · Python · PHP · Go · Bash |
+| **Frontend** | React · Next.js · Vue · Tailwind CSS · Sass · Vite · HTML · CSS |
+| **Backend** | Node.js · Express · NestJS · Laravel · Django |
+| **Data** | PostgreSQL · MySQL · MongoDB · Redis |
+| **Delivery & design** | Git · Docker · Kubernetes · AWS · Cloudflare · Vercel · Linux · Figma |
+| **Commerce & AI tools** | Shopify · Claude Code · OpenAI · xAI Grok · Gemini |
 
-<!-- Card stats: dùng mirror vì instance công khai github-readme-stats.vercel.app đang DEPLOYMENT_PAUSED.
-     Khi nào self-host trên Vercel riêng thì đổi domain ở đây và ở khối pin phía trên. -->
-<img height="180em" src="https://github-readme-stats-sigma-five.vercel.app/api?username=anndev-69&show_icons=true&count_private=true&include_all_commits=true&hide_border=true&bg_color=0D1117&title_color=A855F7&icon_color=22D3EE&text_color=C9D1D9&ring_color=F472B6" />
+### How I approach the work
 
-<!-- Card top-langs đã gỡ: 9router là fork (bị loại khỏi thống kê) và repo profile không có ngôn ngữ,
-     nên card luôn rỗng. Thêm lại khi đã có repo gốc. -->
+- **Understand the job.** Start with the problem and the people doing it.
+- **Keep the system clear.** Choose tools that fit; make the next change easier.
+- **Check the real path.** Test the behavior people rely on, including what can go wrong.
+- **Keep learning.** Bring each lesson into the next thing I build.
 
-<br/><br/>
+## Activity
 
-<img width="98%" src="https://github-readme-activity-graph.vercel.app/graph?username=anndev-69&bg_color=0D1117&color=A855F7&line=22D3EE&point=F472B6&area=true&area_color=7C3AED&hide_border=true&custom_title=Contribution%20Pulse" />
+_Mỗi ô xanh là một ngày vun xới. Còn học, còn làm thì vẫn còn lớn lên._
 
-<br/><br/>
+<a href="https://github.com/anndev-69?tab=overview">
+  <img width="100%" src="assets/activity.svg" alt="GitHub activity over the last 12 months: contributions, commits, pull requests, issues and a daily contribution calendar. The image shows its last update date. Open GitHub for current activity." />
+</a>
 
-<!-- Snake: bảng màu đặt trong .github/workflows/snake.yml -->
+<sub>Updated daily from GitHub · Counts follow GitHub profile visibility settings · [Live overview](https://github.com/anndev-69?tab=overview)</sub>
+
+<details>
+<summary><strong>A little movement in the fields 🐍</strong></summary>
+<br/>
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/anndev-69/anndev-69/output/github-snake-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/anndev-69/anndev-69/output/github-snake.svg" />
-  <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/anndev-69/anndev-69/output/github-snake-dark.svg" />
+  <img width="100%" alt="An animated snake moving through my GitHub contribution grid." src="https://raw.githubusercontent.com/anndev-69/anndev-69/output/github-snake.svg" />
 </picture>
+</details>
 
-</div>
+## Connect
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:7C3AED,50:A855F7,100:22D3EE&height=3&section=header" />
+Bạn thích làm sản phẩm tử tế, hay chỉ muốn nói chuyện công nghệ bên một tách trà — mình luôn vui được kết nối.
 
-<!-- ░░░ CONNECT ░░░ -->
-## 📬 Connect
+**[Visit my website ↗](https://annguyen.com)** &nbsp; / &nbsp; **[Find me on X ↗](https://x.com/annguyen)** &nbsp; / &nbsp; **[Explore my repositories ↗](https://github.com/anndev-69?tab=repositories)**
 
-_Bạn thích làm sản phẩm tử tế, hay chỉ muốn nói chuyện công nghệ bên một tách trà — mình luôn vui được kết nối._
+<br/>
 
-<div align="center">
-
-<a href="https://anguyen.com"><img src="https://img.shields.io/badge/WEBSITE-anguyen.com-A855F7?style=for-the-badge&logo=googlechrome&logoColor=white&labelColor=0D1117" /></a>
-<a href="https://x.com/annguyen"><img src="https://img.shields.io/badge/X-@annguyen-22D3EE?style=for-the-badge&logo=x&logoColor=white&labelColor=0D1117" /></a>
-<a href="https://github.com/anndev-69"><img src="https://img.shields.io/badge/GITHUB-anndev--69-F472B6?style=for-the-badge&logo=github&logoColor=white&labelColor=0D1117" /></a>
-
-</div>
-
-<!-- ░░░ FOOTER WAVE ░░░ -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:22D3EE,35:A855F7,70:7C3AED,100:0D1117&height=140&section=footer&text=from%20the%20rice%20fields%2C%20with%20care&fontSize=22&fontColor=FFFFFF&fontAlignY=72&animation=twinkling" />
+<img width="100%" src="assets/footer.svg" alt="From the rice fields, with care. Keep learning. Keep building. Remember where you started." />
