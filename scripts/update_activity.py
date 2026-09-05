@@ -49,7 +49,7 @@ def render(payload, updated):
             parsed = date.fromisoformat(day["date"])
             x = 32 + week_index * 16.8
             y = 189 + ((parsed.weekday() + 1) % 7) * 15
-            if day_index == 0 and parsed.month != previous_month:
+            if day_index == 0 and parsed.month != previous_month and (week_index > 0 or parsed.day <= 7):
                 parts.append(f'<text x="{x:.1f}" y="179" fill="#aabdb8" font-size="10">{parsed.strftime("%b")}</text>')
                 previous_month = parsed.month
             label = escape(f'{day["date"]}: {day["contributionCount"]} contributions')
