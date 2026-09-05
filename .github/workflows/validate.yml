@@ -1,0 +1,30 @@
+name: Validate profile
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - run: python3 -m unittest discover -s scripts -v
+      - name: Validate SVGs and README asset references
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          import xml.etree.ElementTree as ET
+          for asset in Path('assets').glob('*.svg'):
+              ET.parse(asset)
+              print(f'Valid SVG: {asset}')
+          readme = Path('README.md').read_text()
+          for src in re.findall(r'src="(assets/[^"]+)"', readme):
+              assert Path(src).is_file(), f'Missing asset: {src}'
+          assert 'github-readme-stats' not in readme
+          print('README assets exist; no external stats service')
+          PY
+      - run: git diff --check
