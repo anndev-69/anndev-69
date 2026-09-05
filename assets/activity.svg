@@ -5,9 +5,9 @@
 <g font-family="-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif">
 <text x="32" y="38" fill="#c6d7c5" font-size="13" letter-spacing="3">THE LONG GAME</text>
 <text x="32" y="73" fill="#f1f4e9" font-size="28" font-weight="650">A year of showing up.</text>
-<text x="32" y="126" fill="#dbedac" font-size="34" font-weight="650">30</text><text x="32" y="149" fill="#aabdb8" font-size="14">Contributions</text>
-<text x="264" y="126" fill="#dbedac" font-size="34" font-weight="650">24</text><text x="264" y="149" fill="#aabdb8" font-size="14">Commits</text>
-<text x="496" y="126" fill="#dbedac" font-size="34" font-weight="650">2</text><text x="496" y="149" fill="#aabdb8" font-size="14">Pull requests</text>
+<text x="32" y="126" fill="#dbedac" font-size="34" font-weight="650">32</text><text x="32" y="149" fill="#aabdb8" font-size="14">Contributions</text>
+<text x="264" y="126" fill="#dbedac" font-size="34" font-weight="650">25</text><text x="264" y="149" fill="#aabdb8" font-size="14">Commits</text>
+<text x="496" y="126" fill="#dbedac" font-size="34" font-weight="650">3</text><text x="496" y="149" fill="#aabdb8" font-size="14">Pull requests</text>
 <text x="728" y="126" fill="#dbedac" font-size="34" font-weight="650">1</text><text x="728" y="149" fill="#aabdb8" font-size="14">Issues</text>
 <rect x="32.0" y="189" width="12" height="11" rx="2" fill="#202d32"><title>2025-08-31: 0 contributions</title></rect>
 <rect x="32.0" y="204" width="12" height="11" rx="2" fill="#202d32"><title>2025-09-01: 0 contributions</title></rect>
@@ -199,7 +199,7 @@
 <rect x="452.0" y="279" width="12" height="11" rx="2" fill="#202d32"><title>2026-02-28: 0 contributions</title></rect>
 <text x="468.8" y="179" fill="#aabdb8" font-size="10">Mar</text>
 <rect x="468.8" y="189" width="12" height="11" rx="2" fill="#202d32"><title>2026-03-01: 0 contributions</title></rect>
-<rect x="468.8" y="204" width="12" height="11" rx="2" fill="#518563"><title>2026-03-02: 1 contributions</title></rect>
+<rect x="468.8" y="204" width="12" height="11" rx="2" fill="#315b48"><title>2026-03-02: 1 contributions</title></rect>
 <rect x="468.8" y="219" width="12" height="11" rx="2" fill="#202d32"><title>2026-03-03: 0 contributions</title></rect>
 <rect x="468.8" y="234" width="12" height="11" rx="2" fill="#202d32"><title>2026-03-04: 0 contributions</title></rect>
 <rect x="468.8" y="249" width="12" height="11" rx="2" fill="#202d32"><title>2026-03-05: 0 contributions</title></rect>
@@ -337,7 +337,7 @@
 <rect x="771.2" y="279" width="12" height="11" rx="2" fill="#202d32"><title>2026-07-11: 0 contributions</title></rect>
 <rect x="788.0" y="189" width="12" height="11" rx="2" fill="#202d32"><title>2026-07-12: 0 contributions</title></rect>
 <rect x="788.0" y="204" width="12" height="11" rx="2" fill="#202d32"><title>2026-07-13: 0 contributions</title></rect>
-<rect x="788.0" y="219" width="12" height="11" rx="2" fill="#dbedac"><title>2026-07-14: 2 contributions</title></rect>
+<rect x="788.0" y="219" width="12" height="11" rx="2" fill="#518563"><title>2026-07-14: 2 contributions</title></rect>
 <rect x="788.0" y="234" width="12" height="11" rx="2" fill="#202d32"><title>2026-07-15: 0 contributions</title></rect>
 <rect x="788.0" y="249" width="12" height="11" rx="2" fill="#202d32"><title>2026-07-16: 0 contributions</title></rect>
 <rect x="788.0" y="264" width="12" height="11" rx="2" fill="#202d32"><title>2026-07-17: 0 contributions</title></rect>
@@ -352,7 +352,7 @@
 <rect x="821.6" y="189" width="12" height="11" rx="2" fill="#202d32"><title>2026-07-26: 0 contributions</title></rect>
 <rect x="821.6" y="204" width="12" height="11" rx="2" fill="#202d32"><title>2026-07-27: 0 contributions</title></rect>
 <rect x="821.6" y="219" width="12" height="11" rx="2" fill="#202d32"><title>2026-07-28: 0 contributions</title></rect>
-<rect x="821.6" y="234" width="12" height="11" rx="2" fill="#518563"><title>2026-07-29: 1 contributions</title></rect>
+<rect x="821.6" y="234" width="12" height="11" rx="2" fill="#315b48"><title>2026-07-29: 1 contributions</title></rect>
 <rect x="821.6" y="249" width="12" height="11" rx="2" fill="#202d32"><title>2026-07-30: 0 contributions</title></rect>
 <rect x="821.6" y="264" width="12" height="11" rx="2" fill="#202d32"><title>2026-07-31: 0 contributions</title></rect>
 <rect x="821.6" y="279" width="12" height="11" rx="2" fill="#202d32"><title>2026-08-01: 0 contributions</title></rect>
@@ -391,7 +391,7 @@
 <rect x="905.6" y="234" width="12" height="11" rx="2" fill="#202d32"><title>2026-09-02: 0 contributions</title></rect>
 <rect x="905.6" y="249" width="12" height="11" rx="2" fill="#202d32"><title>2026-09-03: 0 contributions</title></rect>
 <rect x="905.6" y="264" width="12" height="11" rx="2" fill="#202d32"><title>2026-09-04: 0 contributions</title></rect>
-<rect x="905.6" y="279" width="12" height="11" rx="2" fill="#dbedac"><title>2026-09-05: 2 contributions</title></rect>
+<rect x="905.6" y="279" width="12" height="11" rx="2" fill="#dbedac"><title>2026-09-05: 4 contributions</title></rect>
 <text x="32" y="323" fill="#aabdb8" font-size="12">Updated 2026-09-05 UTC · Last 12 months · GitHub profile activity</text>
 <text x="771" y="323" fill="#aabdb8" font-size="11">Less</text>
 <rect x="801" y="313" width="12" height="12" rx="2" fill="#202d32"/>
